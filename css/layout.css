@@ -1,0 +1,15 @@
+*{
+    font-family: 'Fira Code', monospace;
+}
+:root{
+    --font:#dcdcdc;
+    --vscode-color: #1e1e1e;
+    --github-color: #000C18;
+    --h1-color: #FF772D;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,body{
+    background-color: var(--vscode-color);
+}

@@ -1,0 +1,34 @@
+.skills-content-group{
+    display: flex;
+    font-size: auto;
+    gap: 10px;
+}
+
+.skills-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skill{
+    width: 170px;
+    height: 135px;
+}
+
+.skill .name {
+    opacity: 0; 
+    position: absolute;
+    text-wrap-mode: nowrap;
+    display: inline-block;
+}
+
+.skill:hover .star {
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
+    position: absolute;
+}
+.skill:hover .name{
+    opacity: 1;
+    transition: opacity 0.02s ease-out;
+    position: relative;
+}
