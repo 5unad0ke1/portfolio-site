@@ -1,3 +1,21 @@
-#text{
-    white-space: pre-wrap;
+.header {
+    margin: 0;
+    padding: 0;
+    height: 1050px;
+    text-align: center; /* テキストを中央揃えに */
+    vertical-align: middle; /* 垂直方向に中央揃えに */
+    background-color: var(--vscode-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    font-size: 64px;
+    color: var(--font);
+
+    text-align: left;
+
+    width: 653px; 
 }

@@ -1,58 +1,9 @@
-.header {
-    margin: 0;
-    padding: 0;
-    height: 1050px;
-    text-align: center; /* テキストを中央揃えに */
-    vertical-align: middle; /* 垂直方向に中央揃えに */
-    background-color: var(--vscode-color);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header-content {
-    font-size: 64px;
-    color: var(--font);
-
-    text-align: left;
-
-    width: 653px; 
-}
-.works{
-    margin: 0;
-    padding: 0;
-    height: 1000px;
-    background-color: var(--github-color);
-}
-.works-content{
-    padding: 20px;
-    border-top: 1px solid var(--font);
-    border-bottom: 1px solid var(--font);
-
-    font-size: 30px;
-    color: var(--font);
-}
-
-
 .about-me{
     margin: 0;
     padding: 0;
     height: 1000px;
     background-color: var(--github-color);
     color: var(--font);
-}
-
-.skills{
-    height: auto;
-    min-height: 1150;
-}
-
-.skills-contents{
-    margin: 100 0;
-    padding: 0;
-    color: var(--font);
-    text-align: left;
-    font-size: 32px;
 }
 
 .content-h1 {
@@ -62,10 +13,6 @@
     font-size: 64px;
 }
 
-i{
-    font-size: 80;
-}
-
 
 .footer{
     height: 50px;
@@ -73,5 +20,6 @@ i{
     color: var(--font);
 }
 .padding{
-    padding:  0px 10%;
+    padding-left: 10%;
+    padding-right: 10%;
 }

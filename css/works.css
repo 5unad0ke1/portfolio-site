@@ -1,0 +1,14 @@
+.works{
+    padding-bottom: 100px;
+    height: auto;
+    background-color: var(--github-color);
+}
+.works-content{
+    margin: 20px auto;
+    padding: 20px;
+    border-top: 1px solid var(--font);
+    border-bottom: 1px solid var(--font);
+
+    font-size: 30px;
+    color: var(--font);
+}
