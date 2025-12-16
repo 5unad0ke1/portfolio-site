@@ -6,8 +6,8 @@ function typeWriter(){
     if (index < text.length){ 
         const char = text.charAt(index);
         
-        if (char === '\n') {
-            textElement.innerHTML += '<br>';
+        if (char === "\n") {
+            textElement.innerHTML += "<br>";
         } 
         else {
             textElement.innerHTML += char;
@@ -35,7 +35,7 @@ typeWriter();
 
 
 
-document.querySelectorAll('.skill .name').forEach(text => {
+document.querySelectorAll(".skill .name").forEach(text => {
     const parentWidth = text.parentElement.clientWidth;
 
     // 試しに大きめでセット
