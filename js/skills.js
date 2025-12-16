@@ -1,85 +1,40 @@
-const skillsData =[
-    {
-        category: "#Programing",
-        item: [
-            {   
-                name: "Unity",
-                level: 4,
-                iconHTML: `<i class="devicon-unity-plain"></i>`
-            },
-            {
-                name: "C#",
-                level: 4,
-                iconHTML: "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg' width='80' height='80'/>"
-            },
-            {
-                name: "Python",
-                level: 3,
-                iconHTML: `<i class="devicon-python-plain colored"></i>`
-            },
-            {
-                name: "HTML",
-                level: 3,
-                iconHTML: `<i class="devicon-html5-plain-wordmark colored"></i>`
-            },
-            {
-                name: "CSS",
-                level: 3,
-                iconHTML: `<i class="devicon-css3-plain-wordmark colored"></i>`
-            },
-            {
-                name: "JavaScript",
-                level: 3,
-                iconHTML: `<i class="devicon-javascript-plain colored"></i>`
-            },
-            {
-                name: "Visual Studio",
-                level: 3,
-                iconHTML: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" height="80" width="80" />` 
-            },
-            {
-                name: "Visual Studio Code",
-                level: 3,
-                iconHTML: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" height="80" width="80"/>`
-            },
-            {
-                name: "Blender",
-                level: 2,
-                iconHTML: `<i class="devicon-blender-original colored"></i>`
-            },
-        ]
-    },
-    {
-        category:"#Version Control",
-        item: [
-            {
-                name:"GitHub",
-                level: 3,
-                iconHTML: '<i class="devicon-github-original"></i>'
-            },
-            {
-                name:"Git",
-                level: 2,
-                iconHTML: '<i class="devicon-git-plain colored"></i>'
-            },
-            {
-                name:"Sourcetree",
-                level: 3,
-                iconHTML: '<i class="devicon-sourcetree-original colored"></i>'
-            },
-            {
-                name:"Slack",
-                level: 3,
-                iconHTML: '<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg" height="80" width="80" />'
-            },
-            {
-                name:"Notion",
-                level: 2,
-                iconHTML: '<i class="devicon-notion-plain"></i>'
-            },
-        ],
-    }
+const skillsData = [
+  {
+    category: "#Game Development",
+    item: [
+      { name: "Unity", level: 4, iconHTML: `<i class="devicon-unity-plain"></i>` },
+      { name: "C#", level: 4, iconHTML: "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg' width='80' height='80'/>" },
+      { name: "Blender", level: 2, iconHTML: `<i class="devicon-blender-original colored"></i>` }
+    ]
+  },
+  {
+    category: "#Web Development",
+    item: [
+      { name: "HTML", level: 3, iconHTML: `<i class="devicon-html5-plain-wordmark colored"></i>` },
+      { name: "CSS", level: 3, iconHTML: `<i class="devicon-css3-plain-wordmark colored"></i>` },
+      { name: "JavaScript", level: 3, iconHTML: `<i class="devicon-javascript-plain colored"></i>` }
+    ]
+  },
+  {
+    category: "#IDE & Tools",
+    item: [
+      { name: "Visual Studio", level: 3, iconHTML: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" height="80" width="80" />` },
+      { name: "Visual Studio Code", level: 3, iconHTML: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" height="80" width="80"/>` },
+      { name: "Python", level: 3, iconHTML: `<i class="devicon-python-plain colored"></i>`},
+    ]
+  },
+  {
+    category: "#Version Control & Communication",
+    item: [
+      { name:"GitHub", level: 3, iconHTML: '<i class="devicon-github-original"></i>' },
+      { name:"Git", level: 2, iconHTML: '<i class="devicon-git-plain colored"></i>' },
+      { name:"Sourcetree", level: 3, iconHTML: '<i class="devicon-sourcetree-original colored"></i>' },
+      { name:"Slack", level: 3, iconHTML: '<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg" height="80" width="80" />' },
+      { name:"Notion", level: 2, iconHTML: '<i class="devicon-notion-plain"></i>' }
+    ]
+  }
 ]
+
 
 
 const skillsList = document.querySelector(".skills-contents");
