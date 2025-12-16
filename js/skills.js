@@ -82,13 +82,13 @@ const skillsData =[
 ]
 
 
-const list = document.querySelector(".skills-contents");
+const skillsList = document.querySelector(".skills-contents");
 
 skillsData.forEach(group => {
     const groupClass = document.createElement("li");
     groupClass.className = "skills-group";
 
-    list.innerHTML += `${group.category}`;
+    skillsList.innerHTML += `${group.category}`;
 
     group.item.forEach(skill =>{
         const skillClass = document.createElement("div");
@@ -104,8 +104,8 @@ skillsData.forEach(group => {
         groupClass.appendChild(skillClass);
     });
 
-    list.appendChild(groupClass);
-    list.innerHTML += `<br>`;
+    skillsList.appendChild(groupClass);
+    skillsList.innerHTML += `<br>`;
 });
 
 function renderStars(level, max = 5) {
