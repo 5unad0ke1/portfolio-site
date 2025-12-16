@@ -6,7 +6,7 @@ const observerEnter = new IntersectionObserver((entries) => {
   });
 },
 {
-    rootMargin: "0px 0px -100px 0px",
+    rootMargin: "0px 0px -49px 0px",
   threshold: 1
 }); // 20%見えたら発火
 
