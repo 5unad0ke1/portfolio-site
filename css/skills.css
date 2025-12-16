@@ -1,3 +1,7 @@
+.skill i{
+    font-size: 80px;
+}
+
 .skills-content-group{
     display: flex;
     font-size: auto;
