@@ -14,7 +14,7 @@ const skillsData =[
             },
             {
                 name: "Python",
-                level: 2,
+                level: 3,
                 iconHTML: `<i class="devicon-python-plain colored"></i>`
             },
             {
@@ -44,7 +44,7 @@ const skillsData =[
             },
             {
                 name: "Blender",
-                level: 3,
+                level: 2,
                 iconHTML: `<i class="devicon-blender-original colored"></i>`
             },
         ]
@@ -53,17 +53,17 @@ const skillsData =[
         category:"#Version Control",
         item: [
             {
-                name:"Git",
+                name:"GitHub",
                 level: 3,
                 iconHTML: '<i class="devicon-github-original"></i>'
             },
             {
-                name:"GitHub",
+                name:"Git",
                 level: 2,
                 iconHTML: '<i class="devicon-git-plain colored"></i>'
             },
             {
-                name:"Git",
+                name:"Sourcetree",
                 level: 3,
                 iconHTML: '<i class="devicon-sourcetree-original colored"></i>'
             },
@@ -74,7 +74,7 @@ const skillsData =[
             },
             {
                 name:"Notion",
-                level: 3,
+                level: 2,
                 iconHTML: '<i class="devicon-notion-plain"></i>'
             },
         ],
