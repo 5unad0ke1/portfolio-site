@@ -41,9 +41,12 @@ const skillsList = document.querySelector(".skills-contents");
 
 skillsData.forEach(group => {
     const groupClass = document.createElement("li");
+
     groupClass.className = "skills-group";
 
-    skillsList.innerHTML += `${group.category}`;
+    const categoryHeading = document.createElement("div");
+    categoryHeading.textContent = `${group.category}`; 
+    skillsList.appendChild(categoryHeading);
 
     group.item.forEach(skill =>{
         const skillClass = document.createElement("div");
@@ -60,7 +63,7 @@ skillsData.forEach(group => {
     });
 
     skillsList.appendChild(groupClass);
-    skillsList.innerHTML += `<br>`;
+    skillsList.appendChild(document.createElement("br"));
 });
 
 function renderStars(level, max = 5) {
