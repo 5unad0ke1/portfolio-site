@@ -27,19 +27,3 @@ function Reset(){
     typeWriter();
 }
 typeWriter(); 
-
-
-
-
-
-
-
-
-document.querySelectorAll(".skill .name").forEach(text => {
-    const parentWidth = text.parentElement.clientWidth;
-
-    text.style.fontSize = "100%";
-
-    const scale = Math.min(1, parentWidth / text.scrollWidth);
-    text.style.fontSize = (scale * 95) + "%";
-});
