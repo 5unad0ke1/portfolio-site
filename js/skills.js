@@ -35,14 +35,6 @@ const skillsData = [
   }
 ]
 
-document.querySelectorAll(".skill .name").forEach(text => {
-    const parentWidth = text.parentElement.clientWidth;
-
-    text.style.fontSize = "100%";
-
-    const scale = Math.min(1, parentWidth / text.scrollWidth);
-    text.style.fontSize = (scale * 95) + "%";
-});
 
 const skillsList = document.querySelector(".skills-contents");
 
@@ -72,6 +64,17 @@ skillsData.forEach(group => {
     skillsList.appendChild(groupClass);
     skillsList.appendChild(document.createElement("br"));
 });
+
+document.querySelectorAll(".skill .name").forEach(text => {
+    const parentWidth = text.parentElement.clientWidth;
+
+    text.style.fontSize = "100%";
+
+    const scale = Math.min(1, parentWidth / text.scrollWidth);
+    text.style.fontSize = (scale * 95) + "%";
+});
+
+
 
 function renderStars(level, max = 5) {
   return `${'★'.repeat(level)}${'・'.repeat(max - level)}`;
