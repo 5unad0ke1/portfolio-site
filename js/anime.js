@@ -1,19 +1,19 @@
 const observerEnter = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
         if(entry.isIntersecting){
-            entry.target.classList.add("show"); // 範囲内
+            entry.target.classList.add("show");
         }
   });
 },
 {
     rootMargin: "0px 0px -100px 0px",
   threshold: 1
-}); // 20%見えたら発火
+});
 
-const observerExit = new IntersectionObserver((entiries) => {
-    entiries.forEach(entry =>{
+const observerExit = new IntersectionObserver((entries) => {
+    entries.forEach(entry =>{
         if(!entry.isIntersecting){
-            entry.target.classList.remove("show"); // 範囲外で消える
+            entry.target.classList.remove("show");
         }
     });
 },
