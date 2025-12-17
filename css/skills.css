@@ -1,8 +1,3 @@
-.skills-content-group{
-    display: flex;
-    font-size: auto;
-    gap: 10px;
-}
 
 .skills-group{
     display: flex;
@@ -10,9 +5,25 @@
     gap: 30px;
 }
 
+.skills{
+    padding-bottom: 100px;
+}
+
+.skills-contents{
+    margin: 100px 0;
+    padding: 0;
+    color: var(--font);
+    text-align: left;
+    font-size: 32px;
+}
+
 .skill{
     width: 170px;
     height: 135px;
+}
+
+.skill i{
+    font-size: 80px;
 }
 
 .skill .name {

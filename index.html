@@ -1,12 +1,15 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- cssファイル -->
-    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/works.css">
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/animation.css">
     
@@ -14,36 +17,30 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />      
     
     <!-- フォントのFiraCode -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap">
 
     <title>砂時計</title>
 </head>
 <body>
-
-    <div class="header">
+    
+    <!-- ===== Header ===== -->
+    <section class="header">
         <div class="header-content">
            <span id="text"></span> 
         </div>
-    </div>
+    </section>
 
-    <div class="works padding"> 
+    <!-- ===== Works ===== -->
+    <section class="works padding"> 
         <div class="content-h1">
             Works
         </div>
-        <div class="works-content animate-on-scroll">
-            Grainium
-        </div>
-        <div class="works-content animate-on-scroll">
-            Silt
-        </div>
-        <div class="works-content animate-on-scroll">
-            TierA.I.M.
-        </div>
-    </div>
+    </section>
 
-    <div class="about-me padding">
+    <!-- ===== About me ===== -->
+    <section class="about-me padding">
         <div class="content-h1">
-            AboutMe
+            About me
         </div>
 
         <div class="about-me-contents">
@@ -70,145 +67,24 @@
             遊びの手ごたえを技術で支えることが、私の目指すエンジニア像です。
         </div>
 
-    </div>
+    </section>
 
-    <div class="skills">
+    <!-- ===== Skills ===== -->
+    <section class="skills padding">
         <div class="content-h1">
-            Skills
+            My skills
         </div>
-        <div class="skills-contents padding">
-            #Programing
-            <div class="skills-group">
-
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-unity-plain"></i>
-                    4/5
-                    <br>
-                    <span class="star">★★★★・</span>
-                    <span class="name">Unity</span>
-                </div>
-                
-                <div class="skill animate-on-scroll">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" width="80" height="80"/>
-                    4/5
-                    <br>
-                    <span class="star">★★★★・</span>
-                    <span class="name">C#</span>
-                </div>
-
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-python-plain colored"></i>
-                    1/5
-                    <br>
-                    <span class="star">★・・・・</span>
-                    <span class="name">Python</span>
-                </div>
-                
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-html5-plain-wordmark colored"></i>
-                    3/5
-                    <br>
-                    <span class="star">★★★・・</span>
-                    <span class="name">HTML</span>
-                </div>
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-css3-plain-wordmark colored"></i>      
-                    3/5
-                    <br>
-                    <span class="star">★★★・・</span>
-                    <span class="name">CSS</span>
-                </div>
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-javascript-plain colored"></i>
-                    3/5
-                    <br>
-                    <span class="star">★★★・・</span>
-                    <span class="name">JavaScript</span>
-                </div>
-
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-visualstudio-plain colored"></i>
-                    3/5
-                    <br>
-                    <span class="star">★★★・・</span>
-                    <span class="name">Visual Studio</span>
-                </div>
-                
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-vscode-plain colored"></i>
-                    3/5
-                    <br>
-                    <span class="star">★★★・・</span>
-                    <span class="name">Visual Studio Code</span>
-                </div>
-
-                <div class="skills-group">
-                    <div class="skill animate-on-scroll">
-                        <i class="devicon-blender-original colored"></i>
-                        2/5
-                        <br>
-                        <span class="star">★★・・・</span>
-                        <span class="name">Blender</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <br>
-
-            #Version Control
-            <div class="skills-group">
-
-
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-github-original"></i>
-                    3/5
-                    <br>
-                    <span class="star">★★★・・</span>
-                    <span class="name">GitHub</span>
-                </div>
-
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-git-plain colored"></i>
-                    2/5
-                    <br>
-                    <span class="star">★★・・・</span>
-                    <span class="name">Git</span>
-                </div>
-                
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-sourcetree-original colored"></i>
-                    3/5
-                    <br>
-                    <span class="star">★★★・・</span>
-                    <span class="name">Sourcetree</span>
-                </div>
-                
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-slack-plain"></i> 
-                    3/5
-                    <br>
-                    <span class="star">★★★・・</span>
-                    <span class="name">Slack</span>
-                </div>
-                
-                <div class="skill animate-on-scroll">
-                    <i class="devicon-notion-plain"></i>
-                    3/5
-                    <br>
-                    <span class="star">★★★・・</span>  
-                    <span class="name">Notion</span>
-                </div>
-            </div>
-            
+        <div class="skills-contents">
         </div>
-    </div>
-
+    </section>
+    
+    <!-- ===== Footer ===== -->
     <div class="footer padding">
         © 砂時計 / 5unad0ke1
     </div>
 
-    <script src="js/header.js"></script>
+    <script src="js/works.js"></script>
     <script src="js/skills.js"></script>
-    <script src="js/scroll.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/anime.js"></script>
 </body>

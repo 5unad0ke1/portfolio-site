@@ -6,8 +6,8 @@ function typeWriter(){
     if (index < text.length){ 
         const char = text.charAt(index);
         
-        if (char === '\n') {
-            textElement.innerHTML += '<br>';
+        if (char === "\n") {
+            textElement.innerHTML += "<br>";
         } 
         else {
             textElement.innerHTML += char;
@@ -27,21 +27,3 @@ function Reset(){
     typeWriter();
 }
 typeWriter(); 
-
-
-
-
-
-
-
-
-document.querySelectorAll('.skill .name').forEach(text => {
-    const parentWidth = text.parentElement.clientWidth;
-
-    // 試しに大きめでセット
-    text.style.fontSize = "100%";
-
-    // あふれるなら縮小
-    const scale = Math.min(1, parentWidth / text.scrollWidth);
-    text.style.fontSize = (scale * 95) + "%";
-});
