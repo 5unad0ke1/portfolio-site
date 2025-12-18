@@ -17,7 +17,11 @@
   display: block;
 }
 
+.fixed a .icon{
+    filter: drop-shadow(0 0 10px black);
+}
 
-.test-button:hover .icon{
-    filter: drop-shadow(0 0 5px white);
+
+.fixed a:hover .icon{
+    filter: drop-shadow(0 0 10px white);
 }
