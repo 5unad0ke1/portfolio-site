@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     height: 1000px;
-    background-color: var(--github-color);
     color: var(--font);
 }
 
@@ -15,7 +14,6 @@
 
 .footer{
     height: 50px;
-    background-color: var(--vscode-color);
     color: var(--font);
 }
 .padding{
