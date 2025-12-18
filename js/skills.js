@@ -3,7 +3,7 @@ const skillsData = [
     category: "#Game Development",
     item: [
       { name: "Unity", level: 4, iconHTML: `<i class="devicon-unity-plain"></i>` },
-      { name: "C#", level: 4, iconHTML: "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg' width='80' height='80'/>" },
+      { name: "C#", level: 4, iconHTML: "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg' width='80' height='80' />" },
       { name: "Blender", level: 2, iconHTML: `<i class="devicon-blender-original colored"></i>` }
     ]
   },
@@ -46,10 +46,11 @@ skillsData.forEach(group => {
     const categoryHeading = document.createElement("div");
     categoryHeading.textContent = `${group.category}`; 
     skillsList.appendChild(categoryHeading);
+    skillsList.appendChild(document.createElement("br"));
 
     group.item.forEach(skill =>{
         const skillClass = document.createElement("div");
-        skillClass.className = "skill animate-on-scroll";
+        skillClass.className = "skill animate-on-scroll down2up";
 
         skillClass.innerHTML = `
                     ${skill.iconHTML}

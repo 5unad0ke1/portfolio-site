@@ -4,7 +4,6 @@
     height: 1050px;
     text-align: center;
     vertical-align: middle;
-    background-color: var(--vscode-color);
 
     display: flex;
     justify-content: center;

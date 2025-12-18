@@ -3,6 +3,7 @@
 }
 :root{
     --font:#dcdcdc;
+    --font-2:#a7a7a7;
     --vscode-color: #1e1e1e;
     --github-color: #000C18;
     --h1-color: #FF772D;
@@ -11,5 +12,8 @@ html {
   scroll-behavior: smooth;
 }
 html,body{
-    background-color: var(--vscode-color);
+     /* background-color: var(--vscode-color);  */
+}
+img {
+  pointer-events: none;
 }
