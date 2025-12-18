@@ -16,6 +16,9 @@
     text-align: left;
     font-size: 32px;
 }
+.skills .skills-contents .skills-group{
+    color: var(--font);
+}
 
 .skills .skill{
     width: 170px;

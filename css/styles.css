@@ -15,6 +15,10 @@
 .footer{
     height: 50px;
     color: var(--font);
+    
+    align-items: center;
+    
+    display: flex;
 }
 .padding{
     padding-left: 10%;
