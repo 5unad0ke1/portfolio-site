@@ -2,7 +2,6 @@
     position: fixed;
     display: flex;
     opacity: 1;
-    z-index: 1;
     filter: blur(0px) brightness(0.2);
     z-index: -2;
 }
