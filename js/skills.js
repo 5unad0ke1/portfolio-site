@@ -46,6 +46,7 @@ skillsData.forEach(group => {
     const categoryHeading = document.createElement("div");
     categoryHeading.textContent = `${group.category}`; 
     skillsList.appendChild(categoryHeading);
+    skillsList.appendChild(document.createElement("br"));
 
     group.item.forEach(skill =>{
         const skillClass = document.createElement("div");
