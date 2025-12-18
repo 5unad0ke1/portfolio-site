@@ -1,15 +1,15 @@
+.skills{
+    padding-bottom: 100px;
+}
 
-.skills-group{
+.skills .skills-group{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.skills{
-    padding-bottom: 100px;
-}
 
-.skills-contents{
+.skills .skills-contents{
     margin: 100px 0;
     padding: 0;
     color: var(--font);
@@ -17,28 +17,28 @@
     font-size: 32px;
 }
 
-.skill{
+.skills .skill{
     width: 170px;
     height: 135px;
 }
 
-.skill i{
+.skills .skill i{
     font-size: 80px;
 }
 
-.skill .name {
+.skills .skill .name {
     opacity: 0; 
     position: absolute;
     text-wrap-mode: nowrap;
     display: inline-block;
 }
 
-.skill:hover .star {
+.skills .skill:hover .star {
     opacity: 0;
     transition: opacity 0.1s ease-out;
     position: absolute;
 }
-.skill:hover .name{
+.skills .skill:hover .name{
     opacity: 1;
     transition: opacity 0.02s ease-out;
     position: relative;

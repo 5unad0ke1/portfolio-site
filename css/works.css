@@ -3,7 +3,7 @@
     height: auto;
     background-color: var(--github-color);
 }
-.works-content{
+.works .works-content{
     margin: 20px auto;
     padding: 20px;
     border-top: 1px solid var(--font);
@@ -11,4 +11,6 @@
 
     font-size: 30px;
     color: var(--font);
+
+    opacity: 1;
 }
