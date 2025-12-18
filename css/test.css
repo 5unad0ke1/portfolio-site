@@ -1,0 +1,23 @@
+
+.fixed{
+    position: fixed;
+    display: flex;
+
+    gap: 24px;
+    
+    color: white;
+
+    bottom: 20px;
+    right: 20px;
+
+    z-index: 9999;
+}
+
+.fixed svg, .fixed img {
+  display: block;
+}
+
+
+.test-button:hover .icon{
+    filter: drop-shadow(0 0 5px white);
+}
