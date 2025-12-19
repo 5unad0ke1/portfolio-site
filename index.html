@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- cssファイル -->
+    <!-- cssリセットファイル -->
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <!-- アイコン画像のdevicon -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />      
+    <!-- フォントのFiraCode -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap">
+    
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/works.css">
-    <link rel="stylesheet" href="css/skills.css">
+    <!-- <link rel="stylesheet" href="css/skills.css"> -->
+    <link rel="stylesheet" href="css/skills-new.css">
     <link rel="stylesheet" href="css/test.css">
 
-    <!-- アイコン画像のdevicon -->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />      
-    
-    <!-- フォントのFiraCode -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap">
 
     <title>砂時計</title>
 </head>
 
 <body>
-    <img class="background" src="RK20251219015911280.jpg" height="120%">
+    <img class="background" src="RK20251219015911280.jpg" height="150%">
 
     <div class="fixed">
         <a target="_blank" href="https://x.com/5unad0ke1">
@@ -61,22 +62,31 @@
     </section>
 
     <!-- ===== Works ===== -->
-    <section class="works padding"> 
+    <section class="works padding" id="works"> 
         <div class="content-h1 animate-on-scroll">
-            works
+            [Works]
         </div>
         <!-- <div class="works-content animate-on-scroll show">
-            <div>
-                <div class="main">
-                    b
+            <div class="h1">
+                <div>
+                    <div class="main">
+                        b
+                    </div>
+                    <div class="about">
+                        Unity用のエディター拡張機能を提供します
+                    </div>
                 </div>
-                <div class="about">
-                    Unity用のエディター拡張機能を提供します
+                <div class="image">
+                    <i class="devicon-unity-plain"></i>
+                    <i class="devicon-csharp-plain"></i>
                 </div>
             </div>
-            <div class="image">
-                <i class="devicon-unity-plain"></i>
-                <i class="devicon-csharp-plain"></i>
+            <div class="detail">
+                <br>
+                Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.
+                Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.
+                Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.
+                Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.
             </div>
         </div> -->
     </section>
@@ -84,7 +94,7 @@
     <!-- ===== About me ===== -->
     <section class="about-me padding">
         <div class="content-h1 animate-on-scroll">
-            about me
+            [AboutMe]
         </div>
 
         <div class="about-me-contents">
@@ -106,11 +116,49 @@
     </section>
 
     <!-- ===== Skills ===== -->
-    <section class="skills padding">
+    <!-- <section class="skills padding">
         <div class="content-h1 animate-on-scroll">
-            skills
+            [Skills]
         </div>
         <div class="skills-contents">
+        </div>
+    </section> -->
+    
+    <!-- ===== newSkills ===== -->
+    <section class="skills-new padding">
+        <div class="content-h1 animate-on-scroll">
+            [Skills]
+        </div>
+        <div class="test">
+            <i class="devicon-unity-plain"></i>
+            <i class="devicon-csharp-plain"></i>
+            <i class="devicon-blender-original"></i>
+            <i class="devicon-html5-plain-wordmark"></i>
+            <i class="devicon-css3-plain-wordmark"></i>
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-visualstudio-plain"></i>
+            <i class="devicon-vscode-plain"></i>
+            <i class="devicon-python-plain"></i>
+            <i class="devicon-github-original"></i>
+            <i class="devicon-git-plain"></i>
+            <i class="devicon-sourcetree-original"></i>
+        </div>
+        <div class="skills-contents">
+            <!-- <div>#Game Development</div>
+            <div class="skills-group">
+                <a class="skill animate-on-scroll down2up" href="#2">
+                    <div class="h1">
+                        MVrP
+                    </div>
+                    <div class="h2">
+                        R3を用い、View差し替えを前提としたMVrP設計ができる
+                    </div>
+                    <div class="icons">
+                        <i class="devicon-unity-plain"></i>
+                        <i class="devicon-csharp-plain"></i>
+                    </div>
+                </a>
+            </div> -->
         </div>
     </section>
     
@@ -120,7 +168,8 @@
     </div>
 
     <script src="js/works.js"></script>
-    <script src="js/skills.js"></script>
+    <!-- <script src="js/skills.js"></script> -->
+    <script src="js/skills-new.js"></script>
     <script src="js/header.js"></script>
     <script src="js/anime.js"></script>
 </body>

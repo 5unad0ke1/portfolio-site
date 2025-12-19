@@ -1,3 +1,4 @@
+
 const skillsData = [
   {
     category: "#Game Development",
@@ -36,37 +37,38 @@ const skillsData = [
 ]
 
 
-const skillsList = document.querySelector(".skills-contents");
+const skillsList = document.querySelector(".skills .skills-contents");
 
-skillsData.forEach(group => {
-    const groupClass = document.createElement("li");
+if(skillsList){
+  skillsData.forEach(group => {
+      const groupClass = document.createElement("li");
 
-    groupClass.className = "skills-group";
+      groupClass.className = "skills-group";
 
-    const categoryHeading = document.createElement("div");
-    categoryHeading.textContent = `${group.category}`; 
-    skillsList.appendChild(categoryHeading);
-    skillsList.appendChild(document.createElement("br"));
+      const categoryHeading = document.createElement("div");
+      categoryHeading.textContent = `${group.category}`; 
+      skillsList.appendChild(categoryHeading);
+      skillsList.appendChild(document.createElement("br"));
 
-    group.item.forEach(skill =>{
-        const skillClass = document.createElement("div");
-        skillClass.className = "skill animate-on-scroll down2up";
+      group.item.forEach(skill =>{
+          const skillClass = document.createElement("div");
+          skillClass.className = "skill animate-on-scroll down2up";
 
-        skillClass.innerHTML = `
-                    ${skill.iconHTML}
-                    ${skill.level}/5
-                    <br>
-                    <span class="star">${renderStars(skill.level)}</span>
-                    <span class="name">${skill.name}</span>`;
+          skillClass.innerHTML = `
+                      ${skill.iconHTML}
+                      ${skill.level}/5
+                      <br>
+                      <span class="star">${renderStars(skill.level)}</span>
+                      <span class="name">${skill.name}</span>`;
 
-        groupClass.appendChild(skillClass);
-    });
+          groupClass.appendChild(skillClass);
+      });
 
-    skillsList.appendChild(groupClass);
-    skillsList.appendChild(document.createElement("br"));
-});
-
-document.querySelectorAll(".skill .name").forEach(text => {
+      skillsList.appendChild(groupClass);
+      skillsList.appendChild(document.createElement("br"));
+  });
+}
+document.querySelectorAll(".skills .skill .name").forEach(text => {
     const parentWidth = text.parentElement.clientWidth;
 
     text.style.fontSize = "100%";
