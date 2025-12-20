@@ -3,7 +3,7 @@
 }
 
 .skills-new .test{
-    color: var(--font);
+    color: var(--h1-color);
     opacity: 0.5;
     display: flex;
     gap: 4px;
@@ -12,9 +12,15 @@
 }
 
 .skills-new .skills-group{
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
+
+    justify-content: center; 
+
+
     gap: 30px;
 }
 
@@ -41,9 +47,10 @@
 
     font-size: 16px;
     text-decoration: none;
-    background-color: var(--vscode-color);
+    background-color: var(--font);
     box-shadow: 0px 0px 10px 0px black;
 
+    border-radius: 10px;
 }
 
 .skills-new .skill:hover{
@@ -52,20 +59,18 @@
 }
 
 .skills-new .skill .h1{
-    font-size: 20px;
-    color: var(--font);
-    filter: drop-shadow(0 0 1px white);
-
+    font-size: 24px;
+    color: var(--h1-color);
 }
 
 .skills-new .skill .h2{
     font-size: 16px;
-    color: gray;
+    color: var(--vscode-color);
     
 }
 
 .skills-new .skill .icons{
-    color: white;
+    color: var(--vscode-color);
     opacity: 0.2;
 
     font-size: 32px;
@@ -75,5 +80,4 @@
     position: absolute;
     bottom: 10px;
     right: 10px;
-    filter: drop-shadow(0 0 3px black);
 }

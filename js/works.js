@@ -1,39 +1,42 @@
+import { IconHTML } from "./data.js";
+import { WorkID } from "./data.js";
+
 const worksData =[
     {
-        id: 0,
+        id: WorkID.Grainium,
         name: "Grainium",
         about:"Unity向けエディター拡張",
         languages:[
-            { iconHTML: "<i class='devicon-unity-plain'></i>"},
-            { iconHTML: "<i class='devicon-csharp-plain'></i>"},
+            IconHTML.Unity,
+            IconHTML.CS,
         ]
     },
     {
-        id: 1,
+        id: WorkID.Silt,
         name: "Silt",
         about:"Unity向けフレームワーク",
         languages:[
-            { iconHTML: "<i class='devicon-unity-plain'></i>"},
-            { iconHTML: "<i class='devicon-csharp-plain'></i>"},
+            IconHTML.Unity,
+            IconHTML.CS,
         ]
     },
     {
-        id: 2,
+        id: WorkID.TierAIM,
         name: "TierA.I.M.",
         about:"2Dリアクションシューティング",
         languages:[
-            { iconHTML: "<i class='devicon-unity-plain'></i>"},
-            { iconHTML: "<i class='devicon-csharp-plain'></i>"},
+            IconHTML.Unity,
+            IconHTML.CS,
         ]
     },
     {
-        id: 3,
+        id: WorkID.GitHubToNASBackUp,
         name: "GitHub自動バックアップ",
         about:"リポジトリ消失リスクをゼロにする自動バックアップ基盤",
         languages:[
-            {iconHTML:'<i class="devicon-git-plain"></i>'},
-            {iconHTML:'<i class="devicon-github-original"></i>'},
-            {iconHTML:'<i class="devicon-python-plain"></i>'},
+            IconHTML.Git,
+            IconHTML.GitHub,
+            IconHTML.Python,
         ]
     },
     {
@@ -65,7 +68,7 @@ worksData.forEach(work =>{
     
     const icons = createDivText("image");
     work.languages.forEach(iconHTML =>{
-        icons.innerHTML += iconHTML.iconHTML;
+        icons.innerHTML += iconHTML;
     });
     h1.appendChild(icons);
     workClass.appendChild(h1);

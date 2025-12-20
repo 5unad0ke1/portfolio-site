@@ -1,39 +1,57 @@
+import { IconHTML } from "./data.js";
+import { WorkID } from "./data.js";
+
 const skillsDatas = [
     {
         category: "#Game Development",
         item:[
             {
-                id:2,
+                id: WorkID.TierAIM,
                 h1:"MVrP",
                 h2:"R3を用い、View差し替えを前提としたMVrP設計ができる",
                 icons:[
-                    '<i class="devicon-unity-plain"></i>',
-                    '<i class="devicon-csharp-plain"></i>',
+                    IconHTML.Unity,
+                    IconHTML.CS,
                 ],
             },
             {
-                id:0,
+                id: WorkID.Grainium,
                 h1:"Editor Extension",
                 h2:"実行時処理に影響しない前提でエディタ拡張を実装できる",
                 icons:[
-                    '<i class="devicon-unity-plain"></i>',
-                    '<i class="devicon-csharp-plain"></i>',
+                    IconHTML.Unity,
+                    IconHTML.CS,
                 ],
             },
             {
-                id:2,
+                id: WorkID.TierAIM,
                 h1:"URP / Custom Post Effect",
                 h2:"Unity/URP環境で　既存Volumeに依存せず　ポストエフェクトを自作・運用できる",
                 icons:[
-                    '<i class="devicon-unity-plain"></i>',
-                    '<i class="devicon-csharp-plain"></i>',
+                    IconHTML.Unity,
+                    IconHTML.CS,
                 ],
             },
         ],
     },
 ]
 
+CreateAllIcons();
 Generate();
+
+
+function CreateAllIcons(){
+    const icons = document.querySelector(".skills-new .test");
+    if(!icons)
+        return;
+
+    Object.values(IconHTML).forEach(html =>{
+        const divElement = document.createElement("div");
+        
+        divElement.innerHTML = html;
+        icons.appendChild(divElement);
+    });
+}
 
 function Generate(){
     const parent = document.querySelector(".skills-new .skills-contents");
@@ -87,4 +105,11 @@ function openWork(id) {
         target.classList.add('open');
         target.scrollIntoView({ behavior: 'smooth' });
     }
+}
+
+function createDivText(className,textContent = ""){
+    const result = document.createElement("div");
+    result.className = className;
+    result.textContent = textContent;
+    return result;
 }
