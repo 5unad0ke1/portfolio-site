@@ -29,7 +29,7 @@
 
 <body>
 
-    <div class="fixed">
+    <div class="fixed-sns">
         <a target="_blank" href="https://x.com/5unad0ke1">
             <div>
                 <svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
@@ -56,8 +56,23 @@
         </a>
     </div>
 
+    <div class="fixed">
+        <a href="#works">
+            - works
+        </a>
+        <a href="#about-me">
+            - about me
+        </a>
+        <a href="#skills">
+            - skills
+        </a>
+        <a href="#contact">
+            - contact
+        </a>
+    </div>
+
     <!-- ===== Header ===== -->
-    <section class="header">
+    <section class="header padding-side">
         <div class="header-content">
             <span id="text"></span> 
         </div>
@@ -98,32 +113,31 @@
     </section>
 
     <!-- ===== About me ===== -->
-    <section class="about-me padding-side padding-bottom">
+    <section class="about-me padding-side padding-bottom" id="about-me">
         <div class="content-h1 animate-on-scroll">
             [AboutMe]
             <hr>
         </div>
 
         <div class="about-me-contents">
-
-        </div>
-
-        <img class="animate-on-scroll left2right" src="images/5unad0ke1.jpg" alt="アイコン" width="200px" height="200px">
-        
-        <div class="animate-on-scroll left2right">
-            及川裕己
-            <br>
-            ゲームクライアントエンジニア志望。
+            <img class="animate-on-scroll left2right" src="images/5unad0ke1.jpg" alt="アイコン" width="200px" height="200px">
             <br><br>
-            操作感・描画・処理効率の三要素を軸に、
-            <br>
-            Unity上で快適な体験を追求しています。
+            <div class="animate-on-scroll left2right">
+                及川 裕己（OIKAWA Yuki / ハンドル：砂時計）
+                <br>
+                ゲームクライアントエンジニア志望。
+                <br><br>
+                操作感・描画・処理効率の三要素を軸に、Unity上で快適な体験を追求しています。
+                <br>
+                設計から実装 最適化まで一貫して対応し、短期間でも高品質なゲームプレイを提供可能です。
+            </div>
         </div>
+
 
     </section>
     
     <!-- ===== Skills ===== -->
-    <section class="skills padding-side">
+    <section class="skills padding-side" id="skills">
         <div class="content-h1">
             <div class="animate-on-scroll">
                 [Skills]
@@ -155,18 +169,23 @@
     </section>
 
     <!-- ===== Contact ===== -->
-    <section class="contact padding-side padding-bottom">
+    <section class="contact padding-side padding-bottom" id="contact">
         <div class="content-h1 animate-on-scroll">
             [Contact]
             <hr>
         </div>
 
         <div class="contact-me-contents animate-on-scroll">
-            ご連絡は
+            実装内容や設計意図など、技術的なご質問があれば
+            <br>
             <a href="mailto:yuki.oikawa2008@gmail.com">
                 yuki.oikawa2008@gmail.com
             </a>
-            までお願いいたします。
+            または
+            <a href="https://x.com/5unad0ke1">
+                Twitter(新X)のDM
+            </a>
+            までご連絡ください。
     </section>
     </div>
 
@@ -176,7 +195,6 @@
     </div>
 
     <script type="module" src="js/works.js"></script>
-    <!-- <script src="js/skills.js"></script> -->
     <script type="module" src="js/skills.js"></script>
     <script type="module" src="js/header.js"></script>
     <script type="module" src="js/anime.js"></script>

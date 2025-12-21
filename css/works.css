@@ -16,7 +16,7 @@
 }
 
 .works .works-content:hover{
-    filter: drop-shadow(0 0 10px white);
+    filter: drop-shadow(0 0 5px white);
 
     transform: translateX(20px);
     transition: transform 0.1s ease-out;

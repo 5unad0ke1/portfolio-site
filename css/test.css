@@ -6,7 +6,7 @@
     z-index: -2;
 }
 
-.fixed{
+.fixed-sns{
     position: fixed;
     display: flex;
 
@@ -20,11 +20,11 @@
     z-index: 9999;
 }
 
-.fixed svg, .fixed img {
+.fixed-sns svg, .fixed-sns img {
   display: block;
 }
 
-.fixed a .icon{
+.fixed-sns a .icon{
     filter: drop-shadow(0 0 10px black);
 
     transform: scale(1);
@@ -32,11 +32,32 @@
 }
 
 
-.fixed a:hover .icon{
+.fixed-sns a:hover .icon{
     filter: drop-shadow(0 0 10px white);
 
     transform: scale(1.1);
     transition: all 0.1s ease;
+}
+
+.fixed{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    top: 50%;
+    right: 8px;
+    z-index: 1;
+}
+.fixed a{
+    
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.fixed a:hover{
+    text-decoration: underline;
+    filter: drop-shadow(0 0 10px white);
 }
 
 .asdf{
