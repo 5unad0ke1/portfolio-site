@@ -1,5 +1,4 @@
 .works{
-    padding-bottom: 100px;
     height: auto;
 }
 .works .works-content{
@@ -10,7 +9,8 @@
     border-bottom: 1px solid rgb(from var(--font) r g b / 0.2);
     
     scroll-margin-top: 500px;
-
+    
+    backdrop-filter: blur(3px);
     
     color: var(--font);
 }
@@ -20,6 +20,11 @@
 
     transform: translateX(20px);
     transition: transform 0.1s ease-out;
+}
+
+.works .works-content:has(.detail.open){
+    border-top: 1px solid rgb(from var(--h1-color) r g b / 0.5);
+    border-bottom: 1px solid rgb(from var(--h1-color) r g b / 0.5);
 }
 
 .works .works-content .h1{

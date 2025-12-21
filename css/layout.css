@@ -24,8 +24,9 @@ body::before{
   inset: 0;
   background: url('/images/2ビットマップ.png') repeat top left;
   background-size: 1%;
-  opacity: 0.5;
+  opacity: 0.2;
   filter: brightness(0);
+  
   pointer-events: none; 
   z-index: -1; 
 }

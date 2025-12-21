@@ -1,9 +1,6 @@
 import { worksData } from "./data/worksData.js";
 
 
-const hoge = "Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.";
-
-
 const worksList =  document.querySelector(".works");
 
 worksData.forEach(work =>{
@@ -29,7 +26,7 @@ worksData.forEach(work =>{
 
     const detail = createDivText("detail");
     detail.appendChild(document.createElement("br"));
-    detail.appendChild(createDivText("",hoge));
+    detail.appendChild(createDivText("",work.description));
     workClass.appendChild(detail);
 
     worksList.appendChild(workClass);

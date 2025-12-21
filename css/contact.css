@@ -1,0 +1,7 @@
+.contact{
+    color: var(--font);
+}
+.contact a{
+    color: var(--h1-color);
+    text-decoration: none;
+}
