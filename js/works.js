@@ -1,29 +1,4 @@
-const worksData =[
-    {
-        name: "Grainium",
-        about:"Unity用のエディター拡張機能を提供します",
-        languages:[
-            { iconHTML: "<i class='devicon-unity-plain'></i>"},
-            { iconHTML: "<i class='devicon-csharp-plain'></i>"},
-        ]
-    },
-    {
-        name: "Silt",
-        about:"Unity向けフレームワーク",
-        languages:[
-            { iconHTML: "<i class='devicon-unity-plain'></i>"},
-            { iconHTML: "<i class='devicon-csharp-plain'></i>"},
-        ]
-    },
-    {
-        name: "TierA.I.M.",
-        about:"2Dリアクションシューティング",
-        languages:[
-            { iconHTML: "<i class='devicon-unity-plain'></i>"},
-            { iconHTML: "<i class='devicon-csharp-plain'></i>"},
-        ]
-    },
-];
+import { worksData } from "./data/worksData.js";
 
 
 const worksList =  document.querySelector(".works");
@@ -31,27 +6,42 @@ const worksList =  document.querySelector(".works");
 worksData.forEach(work =>{
     const workClass = document.createElement("div");
 
+    console.log("Creating work:", work.name);
     workClass.className = "left2right works-content animate-on-scroll";
+    workClass.id =work.id;
+
+    const h1 = createDivText("h1");
 
     const text = document.createElement("div");
-    const workName = document.createElement("div");
-    workName.className = "main";
-    workName.textContent = `${work.name}`;
-    text.appendChild(workName);
-
-    const workAbout = document.createElement("div");
-    workAbout.className = "about";
-    workAbout.textContent = `${work.about}`;
-    text.appendChild(workAbout);
-
-    workClass.appendChild(text);
+    text.appendChild(createDivText("main",work.name));
+    text.appendChild(createDivText("about",work.about));
+    h1.appendChild(text);
     
-    const icons = document.createElement("div");
-    icons.className = "image";
+    const icons = createDivText("image");
     work.languages.forEach(iconHTML =>{
-        icons.innerHTML += iconHTML.iconHTML;
+        icons.innerHTML += iconHTML;
     });
-    workClass.appendChild(icons);
+    h1.appendChild(icons);
+    workClass.appendChild(h1);
+
+    const detail = createDivText("detail");
+    detail.appendChild(document.createElement("br"));
+    detail.appendChild(createDivText("",work.description));
+    workClass.appendChild(detail);
 
     worksList.appendChild(workClass);
 });
+
+function createDivText(className,textContent = ""){
+    const result = document.createElement("div");
+    result.className = className;
+    result.textContent = textContent;
+    return result;
+}
+
+document.querySelectorAll(".works .works-content")
+        .forEach(content =>{
+            content.addEventListener("click",() =>{
+                content.querySelector(".detail").classList.toggle("open");
+            });
+        });

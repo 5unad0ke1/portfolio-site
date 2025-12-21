@@ -1,0 +1,78 @@
+.skills-new .test{
+    color: var(--h1-color);
+    opacity: 0.5;
+    display: flex;
+    gap: 4px;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.skills-new .skills-group{
+    flex-wrap: wrap;
+    justify-content: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
+
+
+
+    gap: 30px;
+}
+
+
+.skills-new .skills-contents{
+    margin-bottom: 100px;
+    padding: 0;
+    color: var(--font);
+    text-align: center;
+    font-size: 32px;
+}
+
+.skills-new .skill{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+    width: 350px;
+
+    padding: 10px;
+    
+    text-align: left;
+
+    font-size: 16px;
+    text-decoration: none;
+    background-color: var(--font);
+    box-shadow: 0px 0px 10px 0px black;
+
+    border-radius: 10px;
+}
+
+.skills-new .skill:hover{
+    transform: scale(1.05);
+    transition: transform 0.05s ease;
+}
+
+.skills-new .skill .h1{
+    font-size: 24px;
+    color: var(--h1-color);
+}
+
+.skills-new .skill .h2{
+    font-size: 16px;
+    color: var(--vscode-color);
+    
+}
+
+.skills-new .skill .icons{
+    color: var(--vscode-color);
+    opacity: 0.2;
+
+    font-size: 32px;
+    display: flex;
+    gap: 8px;
+
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

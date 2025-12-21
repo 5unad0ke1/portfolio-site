@@ -28,8 +28,7 @@ skills.forEach(skill => observerExit.observe(skill));
 
 
 
-window.addEventListener('scroll', () => {
-  const target = document.querySelector('.background');
-  
-  target.style.transform= `translateY(${-scrollY * 0.02}px)`;
-});
+// window.addEventListener('scroll', () => {
+//   const target = document.querySelector('.background');
+//   target.style.transform= `translateY(${-scrollY * 0.02}px)`;
+// });
