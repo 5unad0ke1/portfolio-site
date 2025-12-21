@@ -1,13 +1,13 @@
-.skills-new .test{
+.skills .test{
     color: var(--h1-color);
     opacity: 0.5;
     display: flex;
     gap: 4px;
-    font-size: 16px;
+    font-size: var(--8_2);
     margin: 0 10px;
 }
 
-.skills-new .skills-group{
+.skills .skills-group{
     flex-wrap: wrap;
     justify-content: center;
 
@@ -20,7 +20,7 @@
 }
 
 
-.skills-new .skills-contents{
+.skills .skills-contents{
     margin-bottom: 100px;
     padding: 0;
     color: var(--font);
@@ -28,7 +28,7 @@
     font-size: 32px;
 }
 
-.skills-new .skill{
+.skills .skill{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
     
     text-align: left;
 
-    font-size: 16px;
+    font-size: var(--8_2);
     text-decoration: none;
     background-color: var(--font);
     box-shadow: 0px 0px 10px 0px black;
@@ -48,23 +48,23 @@
     border-radius: 10px;
 }
 
-.skills-new .skill:hover{
+.skills .skill:hover{
     transform: scale(1.05);
     transition: transform 0.05s ease;
 }
 
-.skills-new .skill .h1{
-    font-size: 24px;
+.skills .skill .h1{
+    font-size: var(--8_3);
     color: var(--h1-color);
 }
 
-.skills-new .skill .h2{
-    font-size: 16px;
+.skills .skill .h2{
+    font-size: var(--8_2);
     color: var(--vscode-color);
     
 }
 
-.skills-new .skill .icons{
+.skills .skill .icons{
     color: var(--vscode-color);
     opacity: 0.2;
 

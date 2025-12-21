@@ -8,7 +8,7 @@ CreateAllIcons();
 
 
 function CreateAllIcons(){
-    const icons = document.querySelector(".skills-new .test");
+    const icons = document.querySelector(".skills .test");
     if(!icons)
         return;
 
@@ -21,7 +21,7 @@ function CreateAllIcons(){
 }
 
 function Generate(){
-    const parent = document.querySelector(".skills-new .skills-contents");
+    const parent = document.querySelector(".skills .skills-contents");
     if(!parent)
         return;
 
@@ -55,7 +55,7 @@ function Generate(){
     });
 
 
-    document.querySelectorAll('.skills-new .skill').forEach(link => {
+    document.querySelectorAll('.skills .skill').forEach(link => {
     link.addEventListener('click', e => {
         const id = link.getAttribute('href').slice(1);
         openWork(id);

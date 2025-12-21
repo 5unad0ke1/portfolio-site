@@ -8,6 +8,10 @@
   --vscode-color: #1e1e1e;
   --github-color: #000C18;
   --h1-color: #FF772D;
+
+  --h1-size : 64px;
+  --8_3: 24px;
+  --8_2: 16px;
 }
 html{
   scroll-behavior: smooth;

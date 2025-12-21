@@ -27,6 +27,7 @@ worksData.forEach(work =>{
     const detail = createDivText("detail");
     detail.appendChild(document.createElement("br"));
     detail.appendChild(createDivText("",work.description));
+    detail.appendChild(document.createElement("br"));
     workClass.appendChild(detail);
 
     worksList.appendChild(workClass);
