@@ -43,7 +43,9 @@ function Generate(){
 
             const icons = createDivText("icons");
             skillData.icons.forEach(icon =>{
-                icons.innerHTML += icon;
+                const wrapper = document.createElement('span');
+                wrapper.innerHTML = icon;
+                icons.appendChild(wrapper.firstChild);
             });
             skill.appendChild(icons);
             group.appendChild(skill);
@@ -55,7 +57,7 @@ function Generate(){
 
     document.querySelectorAll('.skills-new .skill').forEach(link => {
     link.addEventListener('click', e => {
-        const id = link.getAttribute('href').replace('#', '');
+        const id = link.getAttribute('href').slice(1);
         openWork(id);
         });
     });
@@ -67,11 +69,17 @@ function openWork(id) {
     document.querySelectorAll('.detail')
         .forEach(e => e.classList.remove('open'));
 
-    const target = document.getElementById(id).querySelector('.detail');
-    if (target) {
-        target.classList.add('open');
-        target.scrollIntoView({ behavior: 'smooth' });
-    }
+        
+    const element = document.getElementById(id);
+    if (!element)
+        return;
+
+    const target = element.querySelector('.detail');
+    if (!target)
+        return;
+
+    target.classList.add('open');
+    target.scrollIntoView({ behavior: 'smooth' });
 }
 
 function createDivText(className,textContent = ""){
