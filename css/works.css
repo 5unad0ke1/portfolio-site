@@ -8,7 +8,7 @@
     border-top: 1px solid rgb(from var(--font) r g b / 0.2);
     border-bottom: 1px solid rgb(from var(--font) r g b / 0.2);
     
-    scroll-margin-top: 500px;
+    scroll-margin-top: clamp(80px, 20vh, 200px);
     
     backdrop-filter: blur(3px);
     
