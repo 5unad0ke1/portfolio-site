@@ -44,6 +44,17 @@ export const worksData =[
         description: "このプロジェクトは、GitHub上のリポジトリを定期的にNAS（Network Attached Storage）に自動バックアップするシステムを構築しました。これにより、リポジトリの消失リスクを最小限に抑え、データの安全性と可用性を確保します。",
     },
     {
+        id: WorkID.PortfolioWebsite,
+        name: "Portfolio Website",
+        about:"このポートフォリオサイト",
+        languages:[
+            IconHTML.HTML5,
+            IconHTML.CSS3,
+            IconHTML.JS,
+        ],
+        description: "スタイル性と可読性を重視し、訪問者にとって魅力的で使いやすいデザインを実現しています。",
+    },
+    {
         id:-1,
         name:"",
         about:"",
