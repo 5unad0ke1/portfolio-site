@@ -1,3 +1,7 @@
+.about-me{
+    color: var(--font);
+}
+
 .about-me img{
     border-radius: 50%;
     filter: 
