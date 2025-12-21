@@ -38,3 +38,7 @@
     transform: scale(1.1);
     transition: all 0.1s ease;
 }
+
+.asdf{
+    background-color: rgb(from var(--font) r g b / 0.01);
+}
