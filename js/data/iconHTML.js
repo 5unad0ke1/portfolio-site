@@ -12,10 +12,3 @@ export const IconHTML ={
     Git:    `<i class="devicon-git-plain"></i>`,
     Sourcetree:`<i class="devicon-sourcetree-original"></i>`,
 };
-
-export const WorkID ={
-    Grainium: 0,
-    Silt: 1,
-    TierAIM: 2,
-    GitHubToNASBackUp: 3,
-}

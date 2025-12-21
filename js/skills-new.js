@@ -1,43 +1,10 @@
-import { IconHTML } from "./data.js";
-import { WorkID } from "./data.js";
+import { IconHTML } from "./data/iconHTML.js";
+import { skillsData } from "./data/skillData.js";
 
-const skillsDatas = [
-    {
-        category: "#Game Development",
-        item:[
-            {
-                id: WorkID.TierAIM,
-                h1:"MVrP",
-                h2:"R3を用い、View差し替えを前提としたMVrP設計ができる",
-                icons:[
-                    IconHTML.Unity,
-                    IconHTML.CS,
-                ],
-            },
-            {
-                id: WorkID.Grainium,
-                h1:"Editor Extension",
-                h2:"実行時処理に影響しない前提でエディタ拡張を実装できる",
-                icons:[
-                    IconHTML.Unity,
-                    IconHTML.CS,
-                ],
-            },
-            {
-                id: WorkID.TierAIM,
-                h1:"URP / Custom Post Effect",
-                h2:"Unity/URP環境で　既存Volumeに依存せず　ポストエフェクトを自作・運用できる",
-                icons:[
-                    IconHTML.Unity,
-                    IconHTML.CS,
-                ],
-            },
-        ],
-    },
-]
 
-CreateAllIcons();
+
 Generate();
+CreateAllIcons();
 
 
 function CreateAllIcons(){
@@ -58,7 +25,7 @@ function Generate(){
     if(!parent)
         return;
 
-    skillsDatas.forEach(content => {
+    skillsData.forEach(content => {
         const title = document.createElement("div");
         title.textContent = content.category;
         parent.appendChild(title);
