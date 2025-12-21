@@ -1,6 +1,7 @@
 *{
     font-family: 'Fira Code', monospace;
 }
+
 :root{
   --font:#dcdcdc;
   --font-2:#a7a7a7;
@@ -8,6 +9,7 @@
   --github-color: #000C18;
   --h1-color: #FF772D;
 }
+
 body{
   background-color: var(--vscode-color); 
 
