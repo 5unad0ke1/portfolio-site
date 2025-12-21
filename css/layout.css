@@ -9,11 +9,12 @@
   --github-color: #000C18;
   --h1-color: #FF772D;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body{
   background-color: var(--vscode-color); 
-
-  scroll-behavior: smooth;
 
   position: relative;
 }
