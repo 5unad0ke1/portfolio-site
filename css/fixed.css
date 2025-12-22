@@ -31,12 +31,13 @@
     transition: all 0.4s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .fixed-sns a:hover .icon{
+        filter: drop-shadow(0 0 10px white);
 
-.fixed-sns a:hover .icon{
-    filter: drop-shadow(0 0 10px white);
-
-    transform: scale(1.1);
-    transition: all 0.1s ease;
+        transform: scale(1.1);
+        transition: all 0.1s ease;
+    }
 }
 
 .fixed{
@@ -55,9 +56,12 @@
     color: white;
     text-decoration: none;
     user-select: none;
+
+    filter: drop-shadow(0 0 5px black);
 }
 .fixed a:hover{
     text-decoration: underline;
+
     filter: drop-shadow(0 0 10px white);
 }
 

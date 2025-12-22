@@ -16,11 +16,13 @@
     color: var(--font);
 }
 
-.works .works-content:hover{
-    filter: drop-shadow(0 0 5px white);
+@media (hover: hover) and (pointer: fine) {
+    .works .works-content:hover{
+        filter: drop-shadow(0 0 5px white);
 
-    transform: translateX(20px);
-    transition: transform 0.1s ease-out;
+        transform: translateX(20px);
+        transition: transform 0.1s ease-out;
+    }
 }
 
 .works .works-content:has(.detail.open){
