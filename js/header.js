@@ -1,6 +1,7 @@
-const textElement = document.getElementById("text"); 
+const textElement = document.getElementById("typing-indicator"); 
 const text = " Hello\nI'm\nOIKAWA Yuki.\nNice to meet you."; 
 let index = 0; 
+typeWriter(); 
 
 function typeWriter(){ 
     if (index < text.length){ 
@@ -17,13 +18,8 @@ function typeWriter(){
         setTimeout(typeWriter, 80); 
     }
     else{
-        setTimeout(Reset, 1000); 
+        const arrow = document.createElement("div");
+        arrow.className = "header-arrow";
+        document.querySelector(".header").appendChild(arrow);
     }
 }
-function Reset(){
-    return;
-        index = 0;
-    textElement.innerHTML = "";
-    typeWriter();
-}
-typeWriter(); 

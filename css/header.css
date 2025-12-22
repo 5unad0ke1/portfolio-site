@@ -1,20 +1,58 @@
 .header {
-    margin: 0;
-    padding: 0;
-    height: 1050px;
-    text-align: center;
+    height: 100dvh;
+    @supports (height: 100dvh) {
+        height: 100dvh;
+    }
+
     vertical-align: middle;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.header-content {
+    
     font-size: var(--h1-size);
     color: var(--font);
 
     text-align: left;
 
-    width: 653px; 
+    position: relative;
+
+    user-select: none;
+}
+
+.header-content {
+    width: 100%;
+}
+
+.header .header-arrow{
+    width: clamp(25px, 3vw, 50px);
+    height: clamp(25px, 3vw, 50px);
+    rotate: 45deg;
+
+    border-bottom: 2px var(--font) solid;
+    border-right: 2px var(--font) solid;
+
+    animation: scroll 1.6s infinite ease-in-out;
+
+    position: absolute;
+    bottom: 100px;
+}
+
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0)
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50px) translateX(50px);
+    }
 }

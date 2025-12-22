@@ -39,7 +39,10 @@ function Generate(){
             skill.href = `#${skillData.id}`;
 
             skill.appendChild(createDivText("h1",skillData.h1));
-            skill.appendChild(createDivText("h2",skillData.h2));
+
+            const h2 = createDivText("h2");
+            h2.appendChild(createDivText("h2",skillData.h2));
+            skill.appendChild(h2);
 
             const icons = createDivText("icons");
             skillData.icons.forEach(icon =>{

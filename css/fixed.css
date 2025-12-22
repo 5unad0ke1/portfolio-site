@@ -1,0 +1,66 @@
+.background{
+    position: fixed;
+    display: flex;
+    opacity: 1;
+    filter: blur(0px) brightness(0.2);
+    z-index: -2;
+}
+
+.fixed-sns{
+    position: fixed;
+    display: flex;
+
+    gap: 24px;
+    
+    color: white;
+
+    bottom: 20px;
+    right: 20px;
+
+    z-index: 10;
+}
+
+.fixed-sns svg, .fixed-sns img {
+  display: block;
+}
+
+.fixed-sns a .icon{
+    filter: drop-shadow(0 0 10px black);
+
+    transform: scale(1);
+    transition: all 0.4s ease;
+}
+
+
+.fixed-sns a:hover .icon{
+    filter: drop-shadow(0 0 10px white);
+
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+}
+
+.fixed{
+    position: fixed;
+    display: flex;
+    gap: 5%;
+
+    top: 8px;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+}
+.fixed a{
+    
+    font-size: clamp(0.7rem, 4vw, 1rem);
+    color: white;
+    text-decoration: none;
+    user-select: none;
+}
+.fixed a:hover{
+    text-decoration: underline;
+    filter: drop-shadow(0 0 10px white);
+}
+
+.main-content{
+    background-color: rgb(from var(--font) r g b / 0.01);
+}

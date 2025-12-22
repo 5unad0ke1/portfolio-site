@@ -6,7 +6,6 @@ const worksList =  document.querySelector(".works");
 worksData.forEach(work =>{
     const workClass = document.createElement("div");
 
-    console.log("Creating work:", work.name);
     workClass.className = "left2right works-content animate-on-scroll";
     workClass.id =work.id;
 
@@ -17,7 +16,7 @@ worksData.forEach(work =>{
     text.appendChild(createDivText("about",work.about));
     h1.appendChild(text);
     
-    const icons = createDivText("image");
+    const icons = createDivText("image font-32");
     work.languages.forEach(iconHTML =>{
         icons.innerHTML += iconHTML;
     });
@@ -26,7 +25,8 @@ worksData.forEach(work =>{
 
     const detail = createDivText("detail");
     detail.appendChild(document.createElement("br"));
-    detail.appendChild(createDivText("",work.description));
+    detail.appendChild(document.createTextNode(`概要: ${work.description}`));
+    detail.appendChild(document.createElement("br"));
     detail.appendChild(document.createElement("br"));
     workClass.appendChild(detail);
 
