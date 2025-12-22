@@ -41,7 +41,7 @@ function Generate(){
             skill.appendChild(createDivText("h1",skillData.h1));
 
             const h2 = createDivText("h2");
-            h2.appendChild(document.createTextNode(skillData.h2));
+            h2.appendChild(createDivText("h2",skillData.h2));
             skill.appendChild(h2);
 
             const icons = createDivText("icons");
