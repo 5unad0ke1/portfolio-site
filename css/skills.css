@@ -50,9 +50,11 @@
     border-radius: 10px;
 }
 
-.skills .skill:hover{
-    transform: scale(1.05);
-    transition: transform 0.05s ease;
+@media (hover: hover) and (pointer: fine) {
+    .skills .skill:hover{
+        transform: scale(1.05);
+        transition: transform 0.05s ease;
+    }
 }
 
 .skills .skill .h1{
