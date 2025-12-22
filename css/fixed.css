@@ -61,6 +61,6 @@
     filter: drop-shadow(0 0 10px white);
 }
 
-.asdf{
+.main-content{
     background-color: rgb(from var(--font) r g b / 0.01);
 }
