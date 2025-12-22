@@ -54,11 +54,4 @@ export const worksData =[
         ],
         description: "スタイル性と可読性を重視し、訪問者にとって魅力的で使いやすいデザインを実現しています。",
     },
-    {
-        id:-1,
-        name:"",
-        about:"",
-        languages:[],
-        description:"",
-    },
 ];
