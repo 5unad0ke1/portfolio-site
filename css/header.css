@@ -1,5 +1,9 @@
 .header {
     height: 100dvh;
+    @supports (height: 100dvh) {
+        height: 100dvh;
+    }
+
     vertical-align: middle;
 
     display: flex;
@@ -19,4 +23,36 @@
 
 .header-content {
     width: 100%;
+}
+
+.header .header-arrow{
+    width: clamp(25px, 3vw, 50px);
+    height: clamp(25px, 3vw, 50px);
+    rotate: 45deg;
+
+    border-bottom: 2px var(--font) solid;
+    border-right: 2px var(--font) solid;
+
+    animation: scroll 1.6s infinite ease-in-out;
+
+    position: absolute;
+    bottom: 100px;
+}
+
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0)
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50px) translateX(50px);
+    }
 }
