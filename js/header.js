@@ -1,6 +1,7 @@
 const textElement = document.getElementById("text"); 
 const text = " Hello\nI'm\nOIKAWA Yuki.\nNice to meet you."; 
 let index = 0; 
+typeWriter(); 
 
 function typeWriter(){ 
     if (index < text.length){ 
@@ -16,14 +17,4 @@ function typeWriter(){
         index++;
         setTimeout(typeWriter, 80); 
     }
-    else{
-        setTimeout(Reset, 1000); 
-    }
 }
-function Reset(){
-    return;
-        index = 0;
-    textElement.innerHTML = "";
-    typeWriter();
-}
-typeWriter(); 

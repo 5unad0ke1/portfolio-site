@@ -3,7 +3,7 @@
 }
 .works .works-content{
     margin: 20px auto;
-    padding: 0 16px;
+    padding: 8px 24px;
     min-height: 80px;
     border-top: 1px solid rgb(from var(--font) r g b / 0.2);
     border-bottom: 1px solid rgb(from var(--font) r g b / 0.2);
@@ -11,6 +11,7 @@
     scroll-margin-top: clamp(80px, 20vh, 200px);
     
     backdrop-filter: blur(3px);
+    white-space: pre-line;
     
     color: var(--font);
 }
@@ -43,16 +44,18 @@
 }
 
 .works .works-content .about{
-    font-size: var(--8_2);
+    font-size: var(--16);
 }
 
 
 .works .works-content .image{
-    margin-left: auto;
-    font-size: 32px;
     display: flex;
     gap: 8px;
+    margin-left: auto;
+
+    font-size: clamp(1rem, 2.999vw, 2rem);
 }
+    
 
 .works .detail{
     max-height: 0;

@@ -1,5 +1,6 @@
 .about-me{
     color: var(--font);
+    font-size: var(--16);
 }
 
 .about-me img{

@@ -42,18 +42,18 @@
 .fixed{
     position: fixed;
     display: flex;
-    flex-direction: column;
-    gap: 32px;
+    gap: 5%;
 
-    top: 50%;
-    right: 8px;
+    top: 8px;
+    justify-content: center;
+    width: 100%;
     z-index: 1;
 }
 .fixed a{
     
+    font-size: clamp(0.7rem, 4vw, 1rem);
     color: white;
     text-decoration: none;
-    font-size: 14px;
 }
 .fixed a:hover{
     text-decoration: underline;

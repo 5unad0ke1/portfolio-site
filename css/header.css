@@ -1,20 +1,18 @@
 .header {
-    margin: 0;
-    padding: 0;
-    height: 1050px;
-    text-align: center;
+    height: 90dvh;
     vertical-align: middle;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.header-content {
+    
     font-size: var(--h1-size);
     color: var(--font);
 
     text-align: left;
+}
 
-    width: 653px; 
+.header-content {
+    width: 100%;
 }
