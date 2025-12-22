@@ -5,7 +5,9 @@
     color: var(--h1-color);
     text-decoration: none;
 }
-.contact a:hover{
-    text-decoration: underline;
-    filter: drop-shadow(0 0 10px var(--h1-color));
+@media (hover: hover) and (pointer: fine) {
+    .contact a:hover{
+        text-decoration: underline;
+        filter: drop-shadow(0 0 10px var(--h1-color));
+    }
 }
