@@ -59,5 +59,6 @@ export const worksData =[
         name:"",
         about:"",
         languages:[],
+        description:"",
     },
 ];

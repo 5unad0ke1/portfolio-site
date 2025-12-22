@@ -17,4 +17,9 @@ function typeWriter(){
         index++;
         setTimeout(typeWriter, 80); 
     }
+    else{
+        const arrow = document.createElement("div");
+        arrow.className = "test";
+        document.querySelector(".header").appendChild(arrow);
+    }
 }

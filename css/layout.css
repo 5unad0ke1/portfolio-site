@@ -52,10 +52,11 @@ hr{
 
 img {
   pointer-events: none;
+  user-select: none;
 }
 
 @keyframes breathe{
-  0%{ opacity: 0.2;}
-  50%{ opacity: 0.5;}
-  100%{ opacity: 0.2;}
+  0%{ opacity: 0.1;}
+  50%{ opacity: 0.2;}
+  100%{ opacity: 0.1;}
 }

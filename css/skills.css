@@ -21,7 +21,7 @@
 
 
 .skills .skills-contents{
-    margin-bottom: 100px;
+    margin-bottom: 1dvh;
     padding: 0;
     color: var(--font);
     text-align: center;

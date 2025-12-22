@@ -1,5 +1,5 @@
 .header {
-    height: 90dvh;
+    height: 100dvh;
     vertical-align: middle;
 
     display: flex;
@@ -11,6 +11,10 @@
     color: var(--font);
 
     text-align: left;
+
+    position: relative;
+
+    user-select: none;
 }
 
 .header-content {

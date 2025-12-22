@@ -6,7 +6,6 @@ const worksList =  document.querySelector(".works");
 worksData.forEach(work =>{
     const workClass = document.createElement("div");
 
-    console.log("Creating work:", work.name);
     workClass.className = "left2right works-content animate-on-scroll";
     workClass.id =work.id;
 
