@@ -4,9 +4,7 @@
 
 :root{
   --font:#dcdcdc;
-  --font-2:#a7a7a7;
   --vscode-color: #1e1e1e;
-  --github-color: #000C18;
   --h1-color: #FF772D;
 
   --h1-size : clamp(1.8rem, 5vw, 3rem);
