@@ -30,8 +30,8 @@
     height: clamp(25px, 3vw, 50px);
     rotate: 45deg;
 
-    border-bottom: 2px var(--font) solid;
-    border-right: 2px var(--font) solid;
+    border-bottom: 2px var(--h1-color) solid;
+    border-right: 2px var(--h1-color) solid;
 
     animation: scroll 1.6s infinite ease-in-out;
 

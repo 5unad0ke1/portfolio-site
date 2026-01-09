@@ -38,6 +38,8 @@ function Generate(){
             skill.className = "skill animate-on-scroll down2up";
             skill.href = `#${skillData.id}`;
 
+            skill.appendChild(createDivText("background"));
+
             skill.appendChild(createDivText("h1",skillData.h1));
 
             const h2 = createDivText("h2");
