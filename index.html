@@ -9,9 +9,15 @@
     <!-- cssリセットファイル -->
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
     <!-- アイコン画像のdevicon -->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />      
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" media="print" onload="this.media='all'"/>      
+    <noscript>
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    </noscript>      
     <!-- フォントのFiraCode -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap">
+    </noscript>
     
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -201,8 +207,6 @@
         © 砂時計 / 5unad0ke1
     </div>
 
-    <script type="module" src="js/works.js"></script>
-    <script type="module" src="js/skills.js"></script>
-    <script type="module" src="js/header.js"></script>
-    <script type="module" src="js/anime.js"></script>
+
+    <script type="module" src="js/main.js"></script>
 </body>
