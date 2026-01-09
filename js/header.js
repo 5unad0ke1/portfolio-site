@@ -1,4 +1,8 @@
 const textElement = document.getElementById("typing-indicator"); 
+if(!textElement){
+    throw new Error("Element with ID 'typing-indicator' not found.");
+}
+
 const text = " Hello,\nI'm\n5unad0ke1\nNice to meet you."; 
 let index = 0; 
 typeWriter(); 
