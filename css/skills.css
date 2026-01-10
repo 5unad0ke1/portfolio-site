@@ -1,5 +1,5 @@
 .skills .test{
-    color: var(--h1-color);
+    color: rgb(var(--h1-color));
     opacity: 0.5;
     display: flex;
     gap: 4px;
@@ -23,7 +23,7 @@
 .skills .skills-contents{
     margin-bottom: 1dvh;
     padding: 0;
-    color: var(--font);
+    color: rgb(var(--font));
     text-align: center;
     font-size: var(--32);
 }
@@ -44,7 +44,7 @@
     font-size: var(--16);
     white-space: pre-line;
     text-decoration: none;
-    background-color: var(--font);
+    background-color: rgb(var(--font));
     box-shadow: 0px 0px 10px 0px black;
 
     border-radius: 10px;
@@ -59,17 +59,17 @@
 
 .skills .skill .h1{
     font-size: 20px;
-    color: var(--h1-color);
+    color: rgb(var(--h1-color));
 }
 
 .skills .skill .h2{
     font-size: 15px;
-    color: var(--vscode-color);
+    color: rgb(var(--vscode-color));
     
 }
 
 .skills .skill .icons{
-    color: var(--vscode-color);
+    color: rgb(var(--vscode-color));
     opacity: 0.2;
 
     font-size: 32px;

@@ -1,5 +1,5 @@
 .about-me{
-    color: var(--font);
+    color: rgb(var(--font));
     font-size: var(--16);
 }
 

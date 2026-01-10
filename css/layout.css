@@ -3,9 +3,9 @@
 }
 
 :root{
-  --font:#dcdcdc;
-  --vscode-color: #1e1e1e;
-  --h1-color: #FF772D;
+  --font: 220, 220, 220; /*#dcdcdc*/
+  --vscode-color: 30, 30, 30; /*#1e1e1e*/
+  --h1-color: 255, 119, 45; /* #FF772D */
 
   --h1-size : clamp(1.8rem, 5vw, 3rem);
   --8_3: clamp(1.1rem, 2.5vw, 1.4rem);
@@ -21,7 +21,7 @@ html{
 }
 
 body{
-  background-color: var(--vscode-color); 
+  background-color: rgb(var(--vscode-color)); 
 
   position: relative;
 }
@@ -43,7 +43,7 @@ body::before{
 hr{
   border: none;
   height: 2px;
-  background-color: var(--h1-color);
+  background-color: rgb(var(--h1-color));
   margin: 5px 0;       
   opacity: 0.2;
 }

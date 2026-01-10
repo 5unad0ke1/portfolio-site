@@ -5,15 +5,15 @@
     margin: 20px auto;
     padding: 8px 24px;
     min-height: 80px;
-    border-top: 1px solid rgb(from var(--font) r g b / 0.2);
-    border-bottom: 1px solid rgb(from var(--font) r g b / 0.2);
-    
+    border-top: 1px solid rgba(var(--font), 0.2);
+    border-bottom: 1px solid rgba(var(--font), 0.2);
+
     scroll-margin-top: clamp(80px, 20vh, 200px);
     white-space: pre-line;
-    
-    background-color: rgb(from var(--font) r g b / 0.02);
 
-    color: var(--font);
+    background-color: rgba(var(--font), 0.02);
+
+    color: rgb(var(--font));
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -26,8 +26,8 @@
 }
 
 .works .works-content:has(.detail.open){
-    border-top: 1px solid rgb(from var(--h1-color) r g b / 0.5);
-    border-bottom: 1px solid rgb(from var(--h1-color) r g b / 0.5);
+    border-top: 1px solid rgba(var(--h1-color), 0.5);
+    border-bottom: 1px solid rgba(var(--h1-color), 0.5);
 }
 
 .works .works-content .h1{

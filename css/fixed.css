@@ -65,5 +65,5 @@
 }
 
 .main-content{
-    background-color: rgb(from var(--font) r g b / 0.01);
+    background-color: rgba(var(--h1-color), 0.02);
 }
