@@ -1,20 +1,29 @@
 init();
 
-function init() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-        const el = entry.target;
-        const isShown = el.classList.contains("show");
-
-        if (entry.isIntersecting && !isShown) {
-            el.classList.add("show");
-        } else if (!entry.isIntersecting && isShown) {
-            el.classList.remove("show");
-        }
+function init(){
+    const observerEnter = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("show");
+            }
         });
-    }, {
-        threshold: [0, 0.5] // 緩めて負荷を減らす
+    },
+    {
+        threshold: 1
     });
 
-    document.querySelectorAll(".animate-on-scroll").forEach(el => observer.observe(el));
+    const observerExit = new IntersectionObserver((entries) => {
+        entries.forEach(entry =>{
+            if(!entry.isIntersecting){
+                entry.target.classList.remove("show");
+            }
+        });
+    },
+    {
+        threshold: 0.1
+    })
+
+    const skills = document.querySelectorAll(".animate-on-scroll")
+    skills.forEach(skill => observerEnter.observe(skill));
+    skills.forEach(skill => observerExit.observe(skill));
 }
