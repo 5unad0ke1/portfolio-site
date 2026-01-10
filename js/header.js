@@ -6,7 +6,6 @@ if(!textElement){
 const text = " Hello,\nI'm\n5unad0ke1.\nNice to meet you."; 
 let index = 0;
 
-// DocumentFragmentでまとめてノード作成
 const fragment = document.createDocumentFragment();
 
 function typeWriter(){ 
@@ -21,7 +20,6 @@ function typeWriter(){
         
         index++;
 
-        // まとめて追加（1文字ずつだと負荷軽減は微小だが安全）
         textElement.appendChild(fragment);
 
         setTimeout(typeWriter, 80); 
@@ -33,5 +31,4 @@ function typeWriter(){
     }
 }
 
-// 開始
 typeWriter();
