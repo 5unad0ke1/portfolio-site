@@ -12,7 +12,7 @@
 
     
     font-size: var(--h1-size);
-    color: var(--font);
+    color: rgb(var(--font));
 
     text-align: left;
 
@@ -28,12 +28,22 @@
     
     opacity: 0.5;
 }
+
 .header .video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 
-    filter: brightness(0.5) blur(10px);
+    filter: brightness(0.5);
+}
+@media(hover: hover) and (pointer: fine) {
+    .header .video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        filter: brightness(0.5) blur(10px);
+    }
 }
 
 .header-content {
@@ -45,8 +55,8 @@
     height: clamp(25px, 3vw, 50px);
     rotate: 45deg;
 
-    border-bottom: 2px var(--h1-color) solid;
-    border-right: 2px var(--h1-color) solid;
+    border-bottom: 2px rgb(var(--h1-color)) solid;
+    border-right: 2px rgb(var(--h1-color)) solid;
 
     animation: scroll 1.6s infinite ease-in-out;
 

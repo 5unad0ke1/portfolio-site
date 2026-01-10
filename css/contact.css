@@ -1,13 +1,13 @@
 .contact{
-    color: var(--font);
+    color: rgb(var(--font));
 }
 .contact a{
-    color: var(--h1-color);
+    color: rgb(var(--h1-color));
     text-decoration: none;
 }
 @media (hover: hover) and (pointer: fine) {
     .contact a:hover{
         text-decoration: underline;
-        filter: drop-shadow(0 0 10px var(--h1-color));
+        filter: drop-shadow(0 0 10px rgb(var(--h1-color)));
     }
 }
