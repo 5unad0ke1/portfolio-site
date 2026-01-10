@@ -1,7 +1,7 @@
 import { worksData } from "./data/worksData.js";
 
 const worksList = document.querySelector(".works");
-const fragment = document.createDocumentFragment(); // まとめて追加用
+const fragment = document.createDocumentFragment();
 
 worksData.forEach(work => {
     const workClass = document.createElement("div");

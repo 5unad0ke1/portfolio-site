@@ -12,7 +12,7 @@ function CreateAllIcons(){
 
     Object.values(IconHTML).forEach(html => {
         const divElement = document.createElement("div");
-        divElement.insertAdjacentHTML("beforeend", html); // innerHTMLより安全かつ軽量
+        divElement.insertAdjacentHTML("beforeend", html);
         fragment.appendChild(divElement);
     });
 
@@ -49,8 +49,7 @@ function Generate(){
             const icons = createDivText("icons");
             skillData.icons.forEach(icon => {
                 const wrapper = document.createElement('span');
-                wrapper.insertAdjacentHTML("beforeend", icon); // innerHTML最小化
-                // wrapper.firstChildを直接追加
+                wrapper.insertAdjacentHTML("beforeend", icon);
                 if(wrapper.firstChild) icons.appendChild(wrapper.firstChild);
             });
             skill.appendChild(icons);
@@ -64,7 +63,6 @@ function Generate(){
 
     parent.appendChild(fragment);
 
-    // イベントリスナーは DOM構築後にまとめて追加
     document.querySelectorAll('.skills .skill').forEach(link => {
         link.addEventListener('click', e => {
             const id = link.getAttribute('href').slice(1);
