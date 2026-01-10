@@ -30,20 +30,24 @@ body::before{
   content: "";
   position: absolute;
   inset: 0;
-  background: url('../images/background.webp') repeat top left;
+  background: url('../images/background_black.webp') repeat top left;
   background-size: 10px;
-  filter: brightness(0);
   
   pointer-events: none; 
-  z-index: -1; 
+  z-index: -1;
 
-  animation: breathe 10s  infinite;
+  opacity: 0.3;
+}
+@media (hover: hover) and (pointer: fine) {
+  body::before{
+    animation: breathe 10s  infinite;
+  } 
 }
 
 hr{
   border: none;
   height: 2px;
-  background-color: rgb(var(--h1-color));
+  background-color: rgb(var(--font));
   margin: 5px 0;       
   opacity: 0.2;
 }
@@ -55,6 +59,6 @@ img {
 
 @keyframes breathe{
   0%{ opacity: 0.1;}
-  50%{ opacity: 0.2;}
+  50%{ opacity: 0.3;}
   100%{ opacity: 0.1;}
 }
