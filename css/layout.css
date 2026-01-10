@@ -30,9 +30,8 @@ body::before{
   content: "";
   position: absolute;
   inset: 0;
-  background: url('../images/background.webp') repeat top left;
+  background: url('../images/background_black.webp') repeat top left;
   background-size: 10px;
-  filter: brightness(0);
   
   pointer-events: none; 
   z-index: -1; 
