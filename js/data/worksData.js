@@ -3,6 +3,16 @@ import { IconHTML } from "./iconHTML.js";
 
 export const worksData =[
     {
+        id: WorkID.TierAIM,
+        name: "TierA.I.M.",
+        about:"2Dリアクションシューティング",
+        languages:[
+            IconHTML.Unity,
+            IconHTML.CS,
+        ],
+        description: "TierA.I.M.は、プレイヤーが多彩戦術を駆使して敵と戦うゲームです。\nスピーディーなアクションと戦略的なプレイが求められるエキサイティングな体験を提供します。",
+    },
+    {
         id: WorkID.Grainium,
         name: "Grainium",
         about:"Unity向けエディター拡張",
@@ -21,16 +31,6 @@ export const worksData =[
             IconHTML.CS,
         ],
         description: "Siltは、Unityエンジン向けに開発された柔軟で拡張性の高いフレームワークです。\nゲーム開発者が迅速にプロジェクトを立ち上げ、効率的に開発を進めるための基盤を提供します。",
-    },
-    {
-        id: WorkID.TierAIM,
-        name: "TierA.I.M.",
-        about:"2Dリアクションシューティング",
-        languages:[
-            IconHTML.Unity,
-            IconHTML.CS,
-        ],
-        description: "TierA.I.M.は、プレイヤーが多彩戦術を駆使して敵と戦うゲームです。\nスピーディーなアクションと戦略的なプレイが求められるエキサイティングな体験を提供します。",
     },
     {
         id: WorkID.GitHubToNASBackUp,
