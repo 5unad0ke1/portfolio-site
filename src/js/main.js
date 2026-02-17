@@ -25,7 +25,7 @@ function WorksInit() {
         document.querySelectorAll(".works .works-content").forEach(content => {
         content.addEventListener("click", () => {
             const detail = content.querySelector(".detail");
-            detail.classList.toggle("open");
+            if (detail) detail.classList.toggle("open");
         });
     });
 }
@@ -34,8 +34,8 @@ function SkillsInit(){
 
     document.querySelectorAll('.skills .skill').forEach(link => {
         link.addEventListener('click', e => {
-            const id = link.getAttribute('href').slice(1);
-            openWork(id);
+            const href = link.getAttribute('href');
+            if (href) openWork(href.slice(1));
         });
     });
 }

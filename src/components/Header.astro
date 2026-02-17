@@ -49,7 +49,9 @@ function typeWriter(){
 function addArrow(){
     const arrow = document.createElement("div");
     arrow.className = "header-arrow";
-    document.querySelector(".header").appendChild(arrow);
+    const header = document.querySelector(".header");
+    if(header)
+        header.appendChild(arrow);
 }
 
 typeWriter();

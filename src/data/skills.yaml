@@ -28,7 +28,8 @@
     h1: URP / Custom Post Effect
     h2: |
       URPレンダリングパスを理解した上で
-      既存Volumeに依存しない\nポストエフェクトを設計・運用
+      既存Volumeに依存しない
+      ポストエフェクトを設計・運用
     icons:
       - Unity
       - CS
