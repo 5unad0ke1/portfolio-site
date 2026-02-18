@@ -1,6 +1,5 @@
 ---
 import profile from '../data/profile.yaml';
-console.log(profile);
 ---
 
 
@@ -14,7 +13,7 @@ console.log(profile);
 
     <div class="animate-on-scroll left2right">
         <div class="cardTop">
-            <img src="images/5unad0ke1.jpg" alt="アイコン" width="200" height="200">
+            <img src={`${import.meta.env.BASE_URL}images/5unad0ke1.jpg`} alt="アイコン" width="200" height="200">
         </div>
         <div class="cardDown">
             <div>{profile.description}</div>
