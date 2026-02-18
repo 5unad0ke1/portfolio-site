@@ -1,11 +1,13 @@
 ---
-import { skillsData } from "../js/data/skillData";
 import { IconMap } from '../utils/iconHTML';
 import skills from '../data/skills.yaml';
 ---
 
 <!-- ===== Skills ===== -->
 <section class="skills padding-side" id="skills">
+
+<div class="test-card">
+
     <div class="content-h1">
         <div class="animate-on-scroll">
             [Skills]
@@ -24,7 +26,7 @@ import skills from '../data/skills.yaml';
     <div class="skills-group">
         {skill.items.map(s => (
 
-        <a class="skill" href={`#${s.id}`}>
+        <a class="skill" href={`#${s.jumpto}`}>
             <div class="h1">{s.h1}</div>
             <div class="h2">{s.h2}</div>
             <div class="icons">
@@ -38,5 +40,108 @@ import skills from '../data/skills.yaml';
         ))}
     </div>
 ))}
+</div>
 </section>
-        
+
+
+
+
+<style>
+.skills .test{
+    color: rgb(var(--h1-color));
+    opacity: 0.5;
+    display: flex;
+    gap: 4px;
+    font-size: clamp(0.5rem, 2.9vw, 1rem);
+    margin: 0 10px;
+}
+
+.skills .skills-group{
+    flex-wrap: wrap;
+    justify-content: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
+
+
+
+    gap: 30px;
+}
+
+
+.skills .skills-contents{
+    margin-bottom: 1dvh;
+    padding: 0;
+    color: rgb(var(--font));
+    text-align: center;
+    font-size: var(--32);
+}
+
+.skills .skill{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 350px;
+
+    padding: 24px;
+
+    padding-top: 80px;
+    
+    text-align: left;
+
+    font-size: var(--16);
+    white-space: pre-line;
+    text-decoration: none;
+    background-color: rgb(var(--font));
+    box-shadow: 0px 0px 10px 0px black;
+
+    border-radius: 10px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .skills .skill:hover{
+        transform: scale(1.05);
+        transition: transform 0.05s ease;
+    }
+}
+
+.skills .skill .h1{
+    font-size: 20px;
+    color: rgb(var(--h1-color));
+}
+
+.skills .skill .h2{
+    font-size: 15px;
+    color: rgb(var(--vscode-color));
+    
+}
+
+.skills .skill .icons{
+    color: rgb(var(--vscode-color));
+    opacity: 0.2;
+
+    font-size: 32px;
+    display: flex;
+    gap: 8px;
+
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.skill .background{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url('../images/background.webp') repeat top left;
+    background-size: 4%;
+    opacity: 0.1;
+    
+    border-radius: 10px;
+}
+</style>

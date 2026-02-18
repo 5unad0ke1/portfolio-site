@@ -1,7 +1,7 @@
 - category: #Game Development
   items:
 
-  - id: TierAIM
+  - jumpto: TierAIM
     h1: MVrP
     h2: |
       UIとロジックを分離し、
@@ -12,7 +12,7 @@
       - Unity
       - CS
   
-  - id: Grainium
+  - jumpto: Grainium
     h1: Editor Extension
     h2: |
       開発効率向上を目的とした
@@ -24,7 +24,7 @@
       - Unity
       - CS
   
-  - id: TierAIM
+  - jumpto: TierAIM
     h1: URP / Custom Post Effect
     h2: |
       URPレンダリングパスを理解した上で

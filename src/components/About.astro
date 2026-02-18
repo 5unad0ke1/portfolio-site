@@ -1,18 +1,63 @@
+---
+import profile from '../data/profile.yaml';
+console.log(profile);
+---
+
+
 <!-- ===== About me ===== -->
-<section class="about-me padding-side padding-bottom" id="about-me">
+<section class="about-me padding-side" id="about-me">
+<div class="test-card">
+
     <div class="content-h1 animate-on-scroll">
         [AboutMe]
     </div>
 
-    <div class="about-me-contents">
-        <img class="animate-on-scroll left2right" src="images/5unad0ke1.jpg" alt="アイコン" width="200" height="200">
-        <br><br>
-        <div class="animate-on-scroll left2right">
-            砂時計と名乗っている者です。
-            <br><br>
-            設計から実装まで一貫して携わり、「自分で決めたか」を重視したものづくりを心がけています。
-            <br>
-            技術は常に更新されるため、学び続けることを前提に開発しています。
+    <div class="animate-on-scroll left2right">
+        <div class="cardTop">
+            <img src="images/5unad0ke1.jpg" alt="アイコン" width="200" height="200">
+        </div>
+        <div class="cardDown">
+            <div>{profile.description}</div>
+            <hr>
+
+            {profile.items.map(item => (
+                <div class="row">
+                    <span>{item.key}:</span>
+                    <span>{item.value}</span>
+                </div>
+            ))}
         </div>
     </div>
+</div>
 </section>
+
+<style>
+.about-me .row{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 150px 1fr;
+    font-size: var(--16);
+    padding: 5px 0 5px 0;
+}
+.about-me .cardTop{
+    background-color: #111;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+}
+.about-me .cardDown{
+    letter-spacing: 1px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    white-space: pre-line;
+}
+
+.about-me{
+    color: rgb(var(--font));
+    font-size: var(--16);
+}
+
+.about-me img{
+    border-radius: 50%;
+}
+</style>

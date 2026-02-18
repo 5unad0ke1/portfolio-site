@@ -1,9 +1,0 @@
-.about-me{
-    color: rgb(var(--font));
-    font-size: var(--16);
-}
-
-.about-me img{
-    border-radius: 50%;
-}
-

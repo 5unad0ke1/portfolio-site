@@ -1,0 +1,111 @@
+---
+// src/components/Header.astro
+---
+
+<!-- ===== Header ===== -->
+<section class="header padding-side">
+    <div class="video">
+        <video autoplay muted loop playsinline preload="metadata">
+            <source src="video/first-view.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="header-content" id="typing-indicator">
+    </div>
+</section>
+
+<style>
+.header {
+    height: 100dvh;
+    @supports (height: 100dvh) {
+        height: 100dvh;
+    }
+
+    letter-spacing: 5px;
+    vertical-align: middle;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    font-size: var(--h1-size);
+    color: rgb(var(--font));
+
+    text-align: left;
+
+    position: relative;
+
+    user-select: none;
+}
+.header .video {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    
+    opacity: 0.2;
+}
+
+.header .video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media(hover: hover) and (pointer: fine) {
+    .header .video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        filter: blur(10px);
+    }
+}
+
+.header-content {
+    width: 100%;
+}
+</style>
+
+
+
+<script is:inline>
+const textElement = document.getElementById("typing-indicator"); 
+if(!textElement){
+    throw new Error("Element with ID 'typing-indicator' not found.");
+}
+
+const text = " Hello,\nI'm\n5unad0ke1.\nNice to meet you."; 
+let index = 0;
+
+const fragment = document.createDocumentFragment();
+
+function typeWriter(){ 
+    if (index < text.length){ 
+        const char = text.charAt(index);
+        
+        if (char === "\n") {
+            fragment.appendChild(document.createElement("br"));
+        } else {
+            fragment.appendChild(document.createTextNode(char));
+        }
+        
+        index++;
+
+        textElement.appendChild(fragment);
+
+        setTimeout(typeWriter, 80); 
+    }
+    else{
+        addArrow();
+    }
+}
+function addArrow(){
+    const arrow = document.createElement("div");
+    arrow.className = "header-arrow";
+    const header = document.querySelector(".header");
+    if(header)
+        header.appendChild(arrow);
+}
+
+typeWriter();
+</script>
