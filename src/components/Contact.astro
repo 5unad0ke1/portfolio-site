@@ -1,9 +1,10 @@
----
-// src/components/Contact.astro
----
+
 
 <!-- ===== Contact ===== -->
-<section class="contact padding-side padding-bottom" id="contact">
+<section class="contact padding-side" id="contact">
+
+    <div class="test-card">
+
     <div class="content-h1 animate-on-scroll">
         [Contact]
     </div>
@@ -20,4 +21,21 @@
         </a>
         までご連絡ください。
     </div>
+    </div>
 </section>
+
+<style>
+.contact{
+    color: rgb(var(--font));
+}
+.contact a{
+    color: rgb(var(--h1-color));
+    text-decoration: none;
+}
+@media (hover: hover) and (pointer: fine) {
+    .contact a:hover{
+        text-decoration: underline;
+        filter: drop-shadow(0 0 10px rgb(var(--h1-color)));
+    }
+}
+</style>

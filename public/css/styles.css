@@ -1,7 +1,14 @@
 .content-h1 {
-    padding: 50px 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: rgb(var(--h1-color));
     font-size: var(--h1-size);
+}
+.test-card{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    margin:  20px 0;
 }
 
 
@@ -18,9 +25,6 @@
 .padding-side{
     padding-left: 10%;
     padding-right: 10%;
-}
-.padding-bottom{
-    padding-bottom: 10dvh;
 }
 
 .icon-16{
