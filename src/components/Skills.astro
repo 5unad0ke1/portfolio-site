@@ -1,0 +1,42 @@
+---
+import { skillsData } from "../js/data/skillData";
+import { IconMap } from '../utils/iconHTML';
+import skills from '../data/skills.yaml';
+---
+
+<!-- ===== Skills ===== -->
+<section class="skills padding-side" id="skills">
+    <div class="content-h1">
+        <div class="animate-on-scroll">
+            [Skills]
+        </div>
+
+        <div class="test">
+            {Object.values(IconMap).map(icon => <i class={icon}></i>)}
+        </div>
+    </div>
+    
+    <div class="skills-contents">
+        
+    {skills.map(skill => (
+    <div>{skill.category}</div>
+
+    <div class="skills-group">
+        {skill.items.map(s => (
+
+        <a class="skill" href={`#${s.id}`}>
+            <div class="h1">{s.h1}</div>
+            <div class="h2">{s.h2}</div>
+            <div class="icons">
+            
+            {s.icons.map(icon => (
+                <i class={IconMap[icon]}></i>
+            ))}
+
+            </div>
+        </a>
+        ))}
+    </div>
+))}
+</section>
+        

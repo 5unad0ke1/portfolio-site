@@ -1,3 +1,21 @@
+---
+// src/components/Header.astro
+// import "./header.js";
+---
+
+<!-- ===== Header ===== -->
+<section class="header padding-side">
+    <div class="video">
+        <video autoplay muted loop playsinline preload="metadata">
+            <source src="video/first-view.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="header-content" id="typing-indicator">
+    </div>
+</section>
+
+
+<script is:inline>
 const textElement = document.getElementById("typing-indicator"); 
 if(!textElement){
     throw new Error("Element with ID 'typing-indicator' not found.");
@@ -25,10 +43,16 @@ function typeWriter(){
         setTimeout(typeWriter, 80); 
     }
     else{
-        const arrow = document.createElement("div");
-        arrow.className = "header-arrow";
-        document.querySelector(".header").appendChild(arrow);
+        addArrow();
     }
+}
+function addArrow(){
+    const arrow = document.createElement("div");
+    arrow.className = "header-arrow";
+    const header = document.querySelector(".header");
+    if(header)
+        header.appendChild(arrow);
 }
 
 typeWriter();
+</script>
