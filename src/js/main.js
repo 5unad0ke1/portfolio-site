@@ -34,6 +34,7 @@ function SkillsInit(){
 
     document.querySelectorAll('.skills .skill').forEach(link => {
         link.addEventListener('click', e => {
+            e.preventDefault();
             const href = link.getAttribute('href');
             if (href) openWork(href.slice(1));
         });
