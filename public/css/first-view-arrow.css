@@ -3,12 +3,9 @@
     width: clamp(25px, 3vw, 50px);
     height: clamp(25px, 3vw, 50px);
     rotate: 45deg;
-
     border-bottom: 4px rgb(var(--h1-color)) solid;
     border-right: 4px rgb(var(--h1-color)) solid;
-
     animation: scroll 1.6s infinite ease-in-out;
-
     position: absolute;
     bottom: 100px;
 }
