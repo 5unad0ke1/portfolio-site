@@ -63,6 +63,7 @@
     }
     .nav.show{
         display: grid;
+        justify-content: center;
     }
 }
 
@@ -102,12 +103,15 @@
     const hamburger = document.querySelector('.hamburger');
     const links = document.querySelectorAll('.nav');
 
+if(fixed && hamburger){       
     hamburger.addEventListener('click', () => {
         const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
         hamburger.setAttribute('aria-expanded', String(!isExpanded));
+        hamburger.setAttribute('aria-label', isExpanded ? 'メニューを開く' : 'メニューを閉じる');
         fixed.classList.toggle('show');
         links.forEach(link => {
             link.classList.toggle('show');
         });
     });
+}
 </script>
