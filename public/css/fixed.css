@@ -20,7 +20,7 @@
 }
 
 .fixed-sns svg, .fixed-sns img {
-  display: block;
+    display: block;
 }
 
 .fixed-sns a .icon{
