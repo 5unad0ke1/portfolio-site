@@ -1,16 +1,113 @@
 
 
 <div class="fixed">
-    <a href="#works">
-        - works
-    </a>
-    <a href="#about-me">
-        - about me
-    </a>
-    <a href="#skills">
-        - skills
-    </a>
-    <a href="#contact">
-        - contact
-    </a>
+    <button class="hamburger">
+        ☰
+    </button>
+
+    <div class="nav">
+        <a href="#works">
+            - works
+        </a>
+        <a href="#about-me">
+            - about me
+        </a>
+        <a href="#skills">
+            - skills
+        </a>
+        <a href="#contact">
+            - contact
+        </a>
+    </div>
 </div>
+
+
+<style>
+
+.fixed{
+    color: white;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0, 0.2);
+    white-space: nowrap;
+
+    height: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+@media (max-width: 768px)  {
+    .fixed{
+        display: block;
+        justify-content: start;
+        align-items: start;
+    }
+    .fixed.show{
+        height: 20%;
+    }
+}
+
+.nav{
+    display: flex;
+    gap: 20%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px)  {
+    .nav{
+        display: none;
+        flex-direction: column;
+        gap: 10%;
+    }
+    .nav.show{
+        display: grid;
+    }
+}
+
+.hamburger{
+    opacity: 0;
+    display: none;
+    margin: 5px;
+}
+@media (max-width: 768px)  {
+    .hamburger{
+        opacity: 1;
+        display: block;
+
+        font-size: clamp(0.7rem, 4vw, 2rem);
+        color: white;
+    }
+}
+
+.fixed a{
+    
+    font-size: clamp(0.7rem, 4vw, 1rem);
+    color: white;
+    text-decoration: none;
+    user-select: none;
+}
+@media (hover: hover) and (pointer: fine) {
+    .fixed a:hover{
+        text-decoration: underline;
+
+        filter: drop-shadow(0 0 10px white);
+    }
+}
+</style>
+
+<script>
+    const fixed = document.querySelector('.fixed');
+    const hamburger = document.querySelector('.hamburger');
+    const links = document.querySelectorAll('.nav');
+
+    hamburger.addEventListener('click', () => {
+        fixed.classList.toggle('show');
+        links.forEach(link => {
+            link.classList.toggle('show');
+        });
+    });
+</script>

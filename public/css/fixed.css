@@ -37,32 +37,6 @@
     }
 }
 
-.fixed{
-    position: fixed;
-    display: flex;
-    gap: 5%;
-
-    top: 8px;
-    justify-content: center;
-    width: 100%;
-    z-index: 1;
-}
-.fixed a{
-    
-    font-size: clamp(0.7rem, 4vw, 1rem);
-    color: white;
-    text-decoration: none;
-    user-select: none;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .fixed a:hover{
-        text-decoration: underline;
-
-        filter: drop-shadow(0 0 10px white);
-    }
-}
-
 .main-content{
     background-color: rgba(var(--h1-color), 0.02);
 }
