@@ -38,75 +38,75 @@ import works from '../data/works.yaml';
 
 
 <style>
-.works{
-    height: auto;
-}
-.works .works-content{
-    margin: 20px auto;
-    padding: 8px 24px;
-    min-height: 80px;
-    border-top: 1px solid rgba(var(--font), 0.2);
-    border-bottom: 1px solid rgba(var(--font), 0.2);
-
-    scroll-margin-top: clamp(80px, 20vh, 200px);
-    white-space: pre-line;
-
-    background-color: rgba(var(--font), 0.02);
-
-    color: rgb(var(--font));
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .works .works-content:hover{
-        filter: drop-shadow(0 0 5px white);
-
-        transform: translateX(20px);
-        transition: transform 0.1s ease-out;
+    .works{
+        height: auto;
     }
-}
+    .works .works-content{
+        margin: 20px auto;
+        padding: 8px 24px;
+        min-height: 80px;
+        border-top: 1px solid rgba(var(--font), 0.2);
+        border-bottom: 1px solid rgba(var(--font), 0.2);
 
-.works .works-content:has(.detail.open){
-    border-top: 1px solid rgba(var(--h1-color), 0.5);
-    border-bottom: 1px solid rgba(var(--h1-color), 0.5);
-}
+        scroll-margin-top: clamp(80px, 20vh, 200px);
+        white-space: pre-line;
 
-.works .works-content .h1{
-    align-items: center;
-    display: flex;
-    user-select: none;
-}
+        background-color: rgba(var(--font), 0.02);
 
-.works .works-content .hide{
-    opacity: 0;
-    max-height: 0;
-}
+        color: rgb(var(--font));
+    }
 
-.works .works-content .main{
-    font-size: var(--8_3);
-    margin: 10px auto;
-}
+    @media (hover: hover) and (pointer: fine) {
+        .works .works-content:hover{
+            filter: drop-shadow(0 0 5px white);
 
-.works .works-content .about{
-    font-size: var(--16);
-}
+            transform: translateX(20px);
+            transition: transform 0.1s ease-out;
+        }
+    }
+
+    .works .works-content:has(.detail.open){
+        border-top: 1px solid rgba(var(--h1-color), 0.5);
+        border-bottom: 1px solid rgba(var(--h1-color), 0.5);
+    }
+
+    .works .works-content .h1{
+        align-items: center;
+        display: flex;
+        user-select: none;
+    }
+
+    .works .works-content .hide{
+        opacity: 0;
+        max-height: 0;
+    }
+
+    .works .works-content .main{
+        font-size: var(--8_3);
+        margin: 10px auto;
+    }
+
+    .works .works-content .about{
+        font-size: var(--16);
+    }
 
 
-.works .works-content .image{
-    display: flex;
-    gap: 8px;
-    margin-left: auto;
+    .works .works-content .image{
+        display: flex;
+        gap: 8px;
+        margin-left: auto;
 
-    font-size: clamp(1rem, 2.999vw, 2rem);
-}
-    
+        font-size: clamp(1rem, 2.999vw, 2rem);
+    }
+        
 
-.works .detail{
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.1s ease-out;
-}
-.works .detail.open{
-    max-height: 500px;
-    transition: max-height 0.1s ease-out;
-}
+    .works .detail{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.1s ease-out;
+    }
+    .works .detail.open{
+        max-height: 500px;
+        transition: max-height 0.1s ease-out;
+    }
 </style>

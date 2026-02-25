@@ -23,79 +23,78 @@
 
 
 <style>
-
-.fixed{
-    color: white;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    z-index: 1;
-    background-color: rgba(0,0,0, 0.2);
-    white-space: nowrap;
-
-    height: 4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-@media (max-width: 768px)  {
     .fixed{
-        height: 70px;
-        display: block;
-    }
-    .fixed.show{
-        height: 300px;
-        background-color: rgba(0,0,0, 0.6);
-    }
-}
-
-.nav{
-    display: flex;
-    
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-}
-@media (max-width: 768px)  {
-    .nav{
-        display: none;
-    }
-    .nav.show{
-        display: grid;
-    }
-}
-
-.hamburger{
-    opacity: 0;
-    display: none;
-    margin: 12px;
-}
-@media (max-width: 768px)  {
-    .hamburger{
-        opacity: 1;
-        display: block;
-
-        font-size: clamp(2rem, 4vw, 4rem);
         color: white;
-    }
-}
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 1;
+        background-color: rgba(0,0,0, 0.2);
+        white-space: nowrap;
 
-.fixed a{
-    font-size: clamp(0.7rem, 4vw, 1rem);
-    color: white;
-    text-decoration: none;
-    user-select: none;
-    margin: 10px;
-}
-@media (hover: hover) and (pointer: fine) {
-    .fixed a:hover{
-        text-decoration: underline;
+        height: 4%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        filter: drop-shadow(0 0 10px white);
     }
-}
+    @media (max-width: 768px)  {
+        .fixed{
+            height: 70px;
+            display: block;
+        }
+        .fixed.show{
+            height: 300px;
+            background-color: rgba(0,0,0, 0.6);
+        }
+    }
+
+    .nav{
+        display: flex;
+        
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+    @media (max-width: 768px)  {
+        .nav{
+            display: none;
+        }
+        .nav.show{
+            display: grid;
+        }
+    }
+
+    .hamburger{
+        opacity: 0;
+        display: none;
+        margin: 12px;
+    }
+    @media (max-width: 768px)  {
+        .hamburger{
+            opacity: 1;
+            display: block;
+
+            font-size: clamp(2rem, 4vw, 4rem);
+            color: white;
+        }
+    }
+
+    .fixed a{
+        font-size: clamp(0.7rem, 4vw, 1rem);
+        color: white;
+        text-decoration: none;
+        user-select: none;
+        margin: 10px;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        .fixed a:hover{
+            text-decoration: underline;
+
+            filter: drop-shadow(0 0 10px white);
+        }
+    }
 </style>
 
 <script is:inline>

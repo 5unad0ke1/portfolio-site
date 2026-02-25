@@ -30,35 +30,35 @@
 </div>
 
 <style>
-.fixed-sns{
-    position: fixed;
-    display: flex;
+    .fixed-sns{
+        position: fixed;
+        display: flex;
 
-    gap: 24px;
-    
-    color: white;
+        gap: 24px;
+        
+        color: white;
 
-    bottom: 20px;
-    right: 20px;
+        bottom: 20px;
+        right: 20px;
 
-    z-index: 10;
-}
-
-.fixed-sns svg, .fixed-sns img {
-    display: block;
-}
-
-.fixed-sns a .icon{
-    transform: scale(1);
-    transition: all 0.4s ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .fixed-sns a:hover .icon{
-        filter: drop-shadow(0 0 10px white);
-
-        transform: scale(1.1);
-        transition: all 0.1s ease;
+        z-index: 10;
     }
-}
+
+    .fixed-sns svg, .fixed-sns img {
+        display: block;
+    }
+
+    .fixed-sns a .icon{
+        transform: scale(1);
+        transition: all 0.4s ease;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .fixed-sns a:hover .icon{
+            filter: drop-shadow(0 0 10px white);
+
+            transform: scale(1.1);
+            transition: all 0.1s ease;
+        }
+    }
 </style>
