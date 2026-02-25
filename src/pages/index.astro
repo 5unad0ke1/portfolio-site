@@ -2,11 +2,10 @@
 import Header from '../components/Header.astro';
 import SNS from '../components/SNS.astro';
 import FirstView from '../components/FirstView.astro';
-import Works from '../components/Works.astro';
-import About from '../components/About.astro';
-import Skills from '../components/Skills.astro';
-import Contact from '../components/Contact.astro';
+import MainContents from '../components/MainContents.astro';
 import Footer from '../components/Footer.astro';
+
+import Script from '../components/Script.astro';
 ---
 
 <!DOCTYPE html>
@@ -42,8 +41,6 @@ import Footer from '../components/Footer.astro';
     <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/styles.css`}>
 
     <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/animation.css`}>
-    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/first-view-arrow.css`}>
-    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/fixed.css`}>
 
     <link rel="icon" href={`${import.meta.env.BASE_URL}images/5unad0ke1.jpg`}>
 
@@ -51,37 +48,13 @@ import Footer from '../components/Footer.astro';
 </head>
 
 <body>
-
     <Header />
     <SNS />
 
     <FirstView />
-
-    <main class="main-content">
-
-        <Works />
-
-
-        <About />
-
-
-        <Skills />
-
-
-        <Contact />
-
-    </main>
+    <MainContents />
 
     <Footer />
-
-    <script src="../js/main.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z6GXDMF6E"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-6Z6GXDMF6E');
-    </script>
+    
+    <Script />
 </body>

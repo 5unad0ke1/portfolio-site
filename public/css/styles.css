@@ -11,20 +11,15 @@
     margin:  20px 0;
 }
 
-
-.footer{
-    height: 50px;
-    color: rgb(var(--h1-color));
-
-    background-color: rgba(var(--h1-color), 0.05);
-
-    align-items: center;
-    
-    display: flex;
-}
 .padding-side{
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+@media (max-width: 768px) {
+    .padding-side{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
 }
 
 .icon-16{
