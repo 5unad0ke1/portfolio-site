@@ -2,13 +2,10 @@
 import Header from '../components/Header.astro';
 import SNS from '../components/SNS.astro';
 import FirstView from '../components/FirstView.astro';
-import Works from '../components/Works.astro';
-import About from '../components/About.astro';
-import Skills from '../components/Skills.astro';
-import Contact from '../components/Contact.astro';
+import MainContents from '../components/MainContents.astro';
 import Footer from '../components/Footer.astro';
 
-import Code from "../js/main.js?raw";
+import Script from '../components/Script.astro';
 ---
 
 <!DOCTYPE html>
@@ -45,7 +42,6 @@ import Code from "../js/main.js?raw";
 
     <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/animation.css`}>
     <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/first-view-arrow.css`}>
-    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/fixed.css`}>
 
     <link rel="icon" href={`${import.meta.env.BASE_URL}images/5unad0ke1.jpg`}>
 
@@ -59,30 +55,8 @@ import Code from "../js/main.js?raw";
 
     <FirstView />
 
-    <main class="main-content">
-
-        <Works />
-
-
-        <About />
-
-
-        <Skills />
-
-
-        <Contact />
-
-    </main>
+    <MainContents />
 
     <Footer />
-    <script is:inline set:html={Code}></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z6GXDMF6E"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-6Z6GXDMF6E');
-    </script>
+    <Script />
 </body>
