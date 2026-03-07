@@ -15,7 +15,7 @@ function init() {
         }
         });
     }, {
-        threshold: [0, 0.5]
+        threshold: [0, 1]
     });
 
     document.querySelectorAll(".animate-on-scroll").forEach(el => observer.observe(el));
