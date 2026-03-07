@@ -132,7 +132,7 @@ const base = import.meta.env.BASE_URL;
 
         if (cached) {
         element.style.backgroundImage = `url(${cached})`;
-        // return;
+        return;
         }
 
         const img = new Image();
