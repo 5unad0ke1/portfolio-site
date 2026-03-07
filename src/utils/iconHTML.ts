@@ -2,6 +2,7 @@ export const IconMap ={
     Unity:  `devicon-unity-plain`,
     CS:     `devicon-csharp-plain`,
     Blender:`devicon-blender-original`,
+    Astro:  `devicon-astro-plain`,
     HTML5:  `devicon-html5-plain-wordmark`,
     CSS3:   `devicon-css3-plain-wordmark`,
     JS:     `devicon-javascript-plain`,
