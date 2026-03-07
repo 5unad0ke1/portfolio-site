@@ -7,6 +7,7 @@
   description: |
     TierA.I.M.は、プレイヤーが多彩戦術を駆使して敵と戦うゲームです。
     スピーディーなアクションと戦略的なプレイが求められるエキサイティングな体験を提供します。
+  image: /images/screenshot02.png
 
 - id: Grainium
   name: Grainium
@@ -17,6 +18,7 @@
   description: |
     Grainiumは、Unityエディター内で使用できる強力なエディター拡張ツールです。
     開発者が効率的に作業できるように設計されており、プロジェクトの管理や操作を簡素化します。
+  image: /images/Grainium.png
 
 - id: Silt
   name: Silt
@@ -27,6 +29,7 @@
   description: |
     Siltは、Unityエンジン向けに開発された柔軟で拡張性の高いフレームワークです。
     ゲーム開発者が迅速にプロジェクトを立ち上げ、効率的に開発を進めるための基盤を提供します。
+  image: /images/ContentExample044.png
 
 - id: GitHubToNASBackUp
   name: GitHub自動バックアップ
@@ -38,6 +41,7 @@
   description: |
     このプロジェクトは、GitHub上のリポジトリを定期的にNAS（Network Attached Storage）に自動バックアップするシステムを構築しました。
     これにより、リポジトリの消失リスクを最小限に抑え、データの安全性と可用性を確保します。
+  image: /images/backup.png
 
 - id: PortfolioWebsite
   name: Portfolio Website
@@ -48,3 +52,4 @@
     - JS
   description: |
     スタイル性と可読性を重視し、訪問者にとって魅力的で使いやすいデザインを実現しています。
+  image: /images/ContentExample044.png

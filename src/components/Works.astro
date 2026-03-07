@@ -1,6 +1,8 @@
 ---
 import { IconMap } from '../utils/iconHTML';
 import works from '../data/works.yaml';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <section class="works padding-side" id="works">
@@ -8,10 +10,16 @@ import works from '../data/works.yaml';
         <div class="content-h1 animate-on-scroll">
             [Works]
         </div>
-        
+
         
         {works.map(work => (
-        <div class="left2right works-content animate-on-scroll show" id={work.id}>
+        <div class="left2right works-content animate-on-scroll show" id={work.id} style={`background-image: url(${base}${work.image.slice(1)})`}>
+            <div style="
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.6);">
+            </div>
+            <div style="position: relative; z-index: 1;">
                 <div class="h1">
                     <div>
                         <div class="main">
@@ -29,12 +37,11 @@ import works from '../data/works.yaml';
                     <br>
                     {work.description}
                 </div>
+            </div>
         </div>
         ))}
     </div> 
 </section>
-
-
 
 <style>
     .works{
@@ -44,13 +51,15 @@ import works from '../data/works.yaml';
         margin: 20px auto;
         padding: 8px 24px;
         min-height: 80px;
-        border-top: 1px solid rgba(var(--font), 0.2);
-        border-bottom: 1px solid rgba(var(--font), 0.2);
+        
 
         scroll-margin-top: clamp(80px, 20vh, 200px);
         white-space: pre-line;
 
-        background-color: rgba(var(--font), 0.02);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        
 
         color: rgb(var(--font));
     }
