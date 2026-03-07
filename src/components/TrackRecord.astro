@@ -1,0 +1,52 @@
+---
+import trackRecords from '../data/track-record.yaml';
+---
+
+<section class="track-record padding-side">
+    <div class="test-card" id="track-record">
+        <div class="content-h1 animate-on-scroll">
+            [TrackRecord]
+        </div>
+
+        {trackRecords.map(record =>(
+
+        <div class="record animate-on-scroll left2right">
+            <div>
+                {record.year} {record.work}
+            </div>
+            <div class="content">
+                <span>
+                    {record.content}
+                </span>
+                <span>
+                    {record.result}
+                </span>
+            </div>
+        </div>
+
+        ))}
+    </div>
+</section>
+
+<style>
+    .record{
+        background-color: rgba(255,255,255,0.1);
+        color: white;
+
+        border-radius: 10px;
+        padding: 10px;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        font-size: var(--16);
+
+        display: grid;
+        grid-template-columns: 200px 1fr;
+    }
+    .record .content{
+        display:block;
+        overflow-wrap: break-word;
+        white-space: pre-line;
+    }
+</style>
