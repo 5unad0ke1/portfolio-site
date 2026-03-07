@@ -1,112 +1,173 @@
 ---
 import { IconMap } from '../utils/iconHTML';
 import works from '../data/works.yaml';
+
+const base = import.meta.env.BASE_URL;
 ---
 
-<!-- ===== Works ===== -->
 <section class="works padding-side" id="works">
     <div class="test-card">
         <div class="content-h1 animate-on-scroll">
             [Works]
         </div>
-        
+
         
         {works.map(work => (
-        <div class="left2right works-content animate-on-scroll show" id={work.id}>
-                <div class="h1">
-                    <div>
-                        <div class="main">
-                            {work.name}
-                        </div>
-                        <div class="about">
-                            {work.about}
-                        </div>
-                    </div>
-                    <div class="image font-32">
-                        {work.languages.map(icon => <i class={IconMap[icon]}></i>)}
-                    </div>
-                </div>
-                <div class="detail">
-                    <br>
-                    {work.description}
-                </div>
+    <div 
+    class="left2right works-content animate-on-scroll show" 
+    id={work.id} 
+    data-bg={`${base}${work.image.slice(1)}`}
+    >
+    <div style="
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);">
+    </div>
+    <div style="position: relative; z-index: 1;">
+        <div class="h1">
+        <div>
+            <div class="main">
+                {work.name}
+            </div>
+            <div class="about">
+                {work.about}
+            </div>
         </div>
-        ))}
+            <div class="image font-32">
+                {work.languages.map(language => (
+                    <span role="img" aria-label={language} title={language}>
+                        <i class={IconMap[language]} aria-hidden="true"></i>
+                    </span>
+                ))}
+            </div>
+        </div>
+        <div class="detail">
+            <br>
+            {work.description}
+        </div>
+    </div>
+    </div>
+))}
     </div> 
 </section>
 
-
-
 <style>
-.works{
-    height: auto;
-}
-.works .works-content{
-    margin: 20px auto;
-    padding: 8px 24px;
-    min-height: 80px;
-    border-top: 1px solid rgba(var(--font), 0.2);
-    border-bottom: 1px solid rgba(var(--font), 0.2);
-
-    scroll-margin-top: clamp(80px, 20vh, 200px);
-    white-space: pre-line;
-
-    background-color: rgba(var(--font), 0.02);
-
-    color: rgb(var(--font));
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .works .works-content:hover{
-        filter: drop-shadow(0 0 5px white);
-
-        transform: translateX(20px);
-        transition: transform 0.1s ease-out;
+    .works{
+        height: auto;
     }
-}
+    .works .works-content{
+        position: relative;
+        overflow: hidden;
+        margin: 20px auto;
+        padding: 8px 24px;
+        min-height: 80px;
+        
 
-.works .works-content:has(.detail.open){
-    border-top: 1px solid rgba(var(--h1-color), 0.5);
-    border-bottom: 1px solid rgba(var(--h1-color), 0.5);
-}
+        scroll-margin-top: clamp(80px, 20vh, 200px);
+        white-space: pre-line;
 
-.works .works-content .h1{
-    align-items: center;
-    display: flex;
-    user-select: none;
-}
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        
+        border-top: 1px solid rgba(var(--font), 0.1);
+        border-bottom: 1px solid rgba(var(--font), 0.1);
 
-.works .works-content .hide{
-    opacity: 0;
-    max-height: 0;
-}
+        color: rgb(var(--font));
+    }
 
-.works .works-content .main{
-    font-size: var(--8_3);
-    margin: 10px auto;
-}
+    @media (hover: hover) and (pointer: fine) {
+        .works .works-content:hover{
+            filter: drop-shadow(0 0 5px white);
 
-.works .works-content .about{
-    font-size: var(--16);
-}
+            transform: translateX(20px);
+            transition: transform 0.1s ease-out;
+        }
+    }
+
+    .works .works-content:has(.detail.open){
+        border-top: 1px solid rgba(var(--h1-color), 0.5);
+        border-bottom: 1px solid rgba(var(--h1-color), 0.5);
+    }
+
+    .works .works-content .h1{
+        align-items: center;
+        display: flex;
+        user-select: none;
+    }
+
+    .works .works-content .hide{
+        opacity: 0;
+        max-height: 0;
+    }
+
+    .works .works-content .main{
+        font-size: var(--8_3);
+        margin: 10px auto;
+    }
+
+    .works .works-content .about{
+        font-size: var(--16);
+    }
 
 
-.works .works-content .image{
-    display: flex;
-    gap: 8px;
-    margin-left: auto;
+    .works .works-content .image{
+        display: flex;
+        gap: 8px;
+        margin-left: auto;
 
-    font-size: clamp(1rem, 2.999vw, 2rem);
-}
-    
+        font-size: clamp(1rem, 2.999vw, 2rem);
+    }
+        
 
-.works .detail{
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.1s ease-out;
-}
-.works .detail.open{
-    max-height: 500px;
-    transition: max-height 0.1s ease-out;
-}
+    .works .detail{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.1s ease-out;
+    }
+    .works .detail.open{
+        max-height: 500px;
+        transition: max-height 0.1s ease-out;
+    }
 </style>
+
+<script>
+    async function bakeBlurredBackground(element: HTMLElement, imageUrl: string) {
+        const cacheKey = `blurred:${imageUrl}`;
+        const cached = sessionStorage.getItem(cacheKey);
+
+        if (cached) {
+        element.style.backgroundImage = `url(${cached})`;
+        return;
+        }
+
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        img.src = imageUrl;
+
+        await new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = reject;
+        });
+
+        const canvas = document.createElement("canvas");
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+
+        const ctx = canvas.getContext("2d")!;
+        const blurAmount = canvas.width * 0.002;
+        ctx.filter = `blur(${blurAmount}px)`;
+        // blurのエッジが切れないよう少し広めに描画
+        ctx.drawImage(img, -10, -10, canvas.width + 20, canvas.height + 20);
+
+        const bakedUrl = canvas.toDataURL("image/jpeg", 0.85);
+        sessionStorage.setItem(cacheKey, bakedUrl);
+        element.style.backgroundImage = `url(${bakedUrl})`;
+    }
+
+    //全works-contentに適用
+    document.querySelectorAll<HTMLElement>(".works-content[data-bg]").forEach(el => {
+        const imageUrl = el.dataset.bg!;
+        bakeBlurredBackground(el, imageUrl);
+    });
+</script>
