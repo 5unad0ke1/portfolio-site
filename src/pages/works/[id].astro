@@ -1,0 +1,58 @@
+---
+import Layout from '../../Layouts/BaseLayout.astro';
+import {getAllWorks} from '../../js/works.js'
+
+export async function getStaticPaths() {
+    const works = getAllWorks();
+
+    console.log("works:", JSON.stringify(works, null, 2));
+
+    return works.map(work => ({
+        params: { id: work.id },   
+        props: { work },           
+    }));
+}
+
+const { work } = Astro.props;
+---
+
+
+
+<Layout>
+    <div class="padding-side">
+
+        <!-- Header -->
+        <div class="content-h1">
+            {work.name}
+        </div>
+        
+
+        <!-- Links -->
+        <div>
+            <div class="white">
+                [Related Links]
+            </div>
+            <div class="links">
+                {work.links.map(link => (
+                <a target="_blank" rel="noopener noreferrer" href={link.link}>
+                    {link.name}
+                </a>
+                ))}
+                
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .white {
+        color: rgb(var(--font));
+    }
+    a{
+        color: rgb(var(--h1-color));
+    }
+    .links{
+        display:grid;
+    }
+</style>
+

@@ -1,0 +1,16 @@
+id: tier-aim
+name: TierA.I.M.
+about: 2Dリアクションシューティング
+languages:
+  - Unity
+  - CS
+description: |
+  TierA.I.M.は、プレイヤーが多彩戦術を駆使して敵と戦うゲームです。
+  スピーディーなアクションと戦略的なプレイが求められるエキサイティングな体験を提供します。
+image: /images/screenshot02.png
+
+links:
+  - name: Steam
+    link: https://store.steampowered.com/app/4147740/TierAIM/?l=japanese
+  - name: Vantanページ
+    link: https://www.vantan-game.com/special/tgs/sub_page_04.html
