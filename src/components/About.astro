@@ -20,7 +20,7 @@ import profile from '../data/profile.yaml';
 
             {profile.items.map(item => (
                 <div class="row">
-                    <span>{item.key}:</span>
+                    <span class="key">{item.key}:</span>
                     <span>{item.value}</span>
                 </div>
             ))}
@@ -30,10 +30,12 @@ import profile from '../data/profile.yaml';
 </section>
 
 <style>
+    .row .key{
+        color: rgb(var(--h1-color));
+    }
     .about-me .row{
         display: grid;
-        gap: 10px;
-        grid-template-columns: 150px 1fr;
+        grid-template-columns: 140px 1fr;
         font-size: var(--16);
         padding: 5px 0 5px 0;
     }
@@ -43,7 +45,6 @@ import profile from '../data/profile.yaml';
         border-radius: 20px 20px 0 0;
     }
     .about-me .cardDown{
-        letter-spacing: 1px;
         background-color: #333;
         padding: 20px;
         border-radius: 0 0 20px 20px;
@@ -53,6 +54,8 @@ import profile from '../data/profile.yaml';
     .about-me{
         color: rgb(var(--font));
         font-size: var(--16);
+
+        letter-spacing: 0.1em;
     }
 
     .about-me img{
