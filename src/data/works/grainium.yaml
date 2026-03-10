@@ -1,0 +1,16 @@
+id: grainium
+name: Grainium
+about: Unity向けエディター拡張
+role: Solo
+status: 開発中
+languages:
+  - Unity
+  - CS
+description: |
+  Grainiumは、Unityエディター内で使用できる強力なエディター拡張ツールです。
+  開発者が効率的に作業できるように設計されており、プロジェクトの管理や操作を簡素化します。
+image: /images/Grainium.png
+
+links:
+  - name: GitHub
+    link: https://github.com/5unad0ke1/Grainium
