@@ -1,6 +1,8 @@
 id: tier-aim
 name: TierA.I.M.
 about: 2Dリアクションシューティング
+role: Solo Lead (with Support)
+status: Released
 languages:
   - Unity
   - CS
@@ -12,5 +14,5 @@ image: /images/screenshot02.png
 links:
   - name: Steam
     link: https://store.steampowered.com/app/4147740/TierAIM/?l=japanese
-  - name: Vantanページ
+  - name: TOKYO GAME SHOW 2025
     link: https://www.vantan-game.com/special/tgs/sub_page_04.html
