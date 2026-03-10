@@ -1,0 +1,17 @@
+id: github-to-nas-backup
+name: GitHub自動バックアップ
+about: リポジトリ消失リスクをゼロにする自動バックアップ基盤
+role: Solo
+status: 開発済み
+languages:
+  - Git
+  - GitHub
+  - Python
+description: |
+  GitHub上のリポジトリを定期的にNAS（Network Attached Storage）に自動バックアップするシステムを構築しました。
+  これにより、リポジトリの消失リスクを最小限に抑え、データの安全性と可用性を確保します。
+image: /images/backup.png
+
+links:
+  - name: GitHub
+    link: https://github.com/5unad0ke1/AutoCloneMachine

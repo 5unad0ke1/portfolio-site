@@ -1,22 +1,22 @@
 description: |
-  設計から実装まで一貫して携わり、「自分で決めたか」を重視したものづくりを心がけています。
-  技術は常に更新されるため、学び続けることを前提に開発しています。
+  ゲームをつくること、なぜそう動くかを突き詰めることが好きです。
+  設計から実装まで 自分の意思決定にこだわり 技術の移り変わりを楽しみながら 開発しています。
 
 items:
-  - key: Name
+  - key: name
     value: 砂時計
 
-  - key: Role
-    value: Game Client Engineer
+  - key: role
+    value: Game Client Engineer (Student)
 
-  - key: Location
+  - key: location
     value: Kanagawa, Japan
 
-  - key: Environment
-    value: Windows Laptop
-
-  - key: Messaging
-    value: Discord / Slack
-
-  - key: Birthday
+  - key: birthday
     value: 04 / 24
+
+  - key: favorite
+    value: SEKIRO, ARMORED CORE VI, Portal 2
+
+  - key: interests
+    value: Unity, Shader, Rust, LitMotion
