@@ -5,8 +5,6 @@ import {getAllWorks} from '../../js/works.js'
 export async function getStaticPaths() {
     const works = getAllWorks();
 
-    console.log("works:", JSON.stringify(works, null, 2));
-
     return works.map(work => ({
         params: { id: work.id },   
         props: { work },           
