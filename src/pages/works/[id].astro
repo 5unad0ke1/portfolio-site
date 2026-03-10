@@ -57,18 +57,25 @@ const base = import.meta.env.BASE_URL;
         </div>
 
         <!-- Links -->
+        
         <div class="test-card">
             <div class="content-h1">
                 [Related Links]
             </div>
+
+            {work.links && work.links.length > 0 ? (
             <div class="links">
                 {work.links.map(link => (
-                <a target="_blank" rel="noopener noreferrer" href={link.link}>
-                    {link.name}
-                </a>
+                    <a target="_blank" rel="noopener noreferrer" href={link.link}>
+                        {link.name}
+                    </a>
                 ))}
-                
             </div>
+            ) : (
+            <div class="white">
+                リンクなし
+            </div>
+            )}
         </div>
     </div>
 </Layout>
