@@ -8,11 +8,25 @@ export function getAllWorks() {
 
     const data = files.map(file => {
         const raw = fs.readFileSync(path.join(dir, file), 'utf-8');
-        return yaml.load(raw);
+        const work = yaml.load(raw);
+
+        if (!work || typeof work !== 'object' || Array.isArray(work)) {
+            throw new Error(`${file} must contain a single work object`);
+        }
+
+        const requiredKeys = ['id', 'name', 'about', 'role', 'status', 'languages', 'description', 'image'];
+        for (const key of requiredKeys) {
+            if (!(key in work)) {
+                throw new Error(`${file} is missing required field: ${key}`);
+            }
+        }
+
+        if (!Array.isArray(work.languages)) {
+            throw new Error(`${file} field "languages" must be an array`);
+        }
+
+        return work;
     });
 
-    if (!Array.isArray(data)) {
-        throw new Error('src/data/works.yaml must contain a top-level array');
-    }
     return data;
 }
