@@ -50,7 +50,7 @@ const base = import.meta.env.BASE_URL;
             <br>
 
             <!-- header image -->
-            <img class="header-image" src={`${base}${work.image}`} alt={work.name} />
+            <img class="header-image" src={`${base}${work.image.slice(1)}`} alt={work.name} />
         </div>
         
         <!-- description -->
