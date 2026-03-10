@@ -12,14 +12,8 @@
 }
 
 .padding-side{
-    padding-left: 2%;
-    padding-right: 2%;
-}
-@media (max-width: 768px) {
-    .padding-side{
-        padding-left: 0%;
-        padding-right: 0%;
-    }
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .icon-16{
