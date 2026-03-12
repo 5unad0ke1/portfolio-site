@@ -1,5 +1,8 @@
 ---
 import trackRecords from '../data/track-record.yaml';
+
+// tierが小さく、yearが新しい順にソート
+const sortedRecords = trackRecords;
 ---
 
 <section class="track-record padding-side">
@@ -8,45 +11,143 @@ import trackRecords from '../data/track-record.yaml';
             [TrackRecord]
         </div>
 
-        {trackRecords.map(record =>(
-
-        <div class="record animate-on-scroll left2right">
-            <div>
-                {record.year} {record.work}
-            </div>
-            <div class="content">
-                <span>
-                    {record.content}
-                </span>
-                <span>
-                    {record.result}
-                </span>
-            </div>
+        <div class="records-container">
+            {sortedRecords.map((record, index) => (
+                <div class="record animate-on-scroll left2right" key={index}>
+                    <div class="record-header">
+                        {record.work && <span class="work-badge">{record.work}</span>}
+                        <span class="year-text">{record.year}</span>
+                    </div>
+                    <div class="record-content">
+                        <div class="content-row">
+                            <p class="achievement">
+                                <span class="achievement-icon">✓</span>
+                                {record.result}
+                            </p>
+                            <p class="event-name">{record.content}</p>
+                        </div>
+                    </div>
+                </div>
+            ))}
         </div>
-
-        ))}
     </div>
 </section>
 
 <style>
-    .record{
-        background-color: rgba(255,255,255,0.1);
-        color: white;
-
-        border-radius: 10px;
-        padding: 10px;
-
-        margin-top: 10px;
-        margin-bottom: 10px;
-
-        font-size: var(--16);
-
-        display: grid;
-        grid-template-columns: 200px 1fr;
+    .records-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
     }
-    .record .content{
-        display:block;
-        overflow-wrap: break-word;
-        white-space: pre-line;
+
+    .record {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+        border-left: 4px solid rgba(var(--h1-color), 0.8);
+        border-radius: 8px;
+        padding: 16px 20px;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+
+    .record:hover {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+        border-left-color: rgba(var(--h1-color), 1);
+        transform: translateX(4px);
+    }
+
+    .record-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .work-badge {
+        background-color: rgb(var(--h1-color));
+        color: black;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: var(--13);
+        white-space: nowrap;
+    }
+
+    .year-text {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: var(--13);
+        white-space: nowrap;
+    }
+
+    .record-content {
+        margin-left: 0;
+    }
+
+    .content-row {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .achievement {
+        color: rgb(var(--h1-color));
+        font-size: var(--14);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+        min-width: 120px;
+    }
+
+    .event-name {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: var(--14);
+        margin: 0;
+        line-height: 1.5;
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .achievement-icon {
+        color: rgb(var(--h1-color));
+    }
+
+    @media (max-width: 640px) {
+        .record {
+            padding: 12px 16px;
+            border-left-width: 3px;
+        }
+
+        .record-header {
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .work-badge {
+            font-size: var(--12);
+            padding: 5px 12px;
+        }
+
+        .year-text {
+            font-size: var(--12);
+        }
+
+        .achievement {
+            font-size: var(--13);
+            min-width: 100%;
+        }
+
+        .event-name {
+            font-size: var(--13);
+            min-width: 100%;
+        }
+
+        .content-row {
+            flex-direction: column;
+            gap: 8px;
+        }
     }
 </style>
