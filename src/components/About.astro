@@ -24,40 +24,37 @@ const socialIcons = {
     <div class="content-h1 animate-on-scroll">
         [AboutMe]
     </div>
+    <div class="profile-card">
+        <div class="profile-header">
+            <img src={`${import.meta.env.BASE_URL}${profile.image}`} width="200" height="200" class="profile-image">
+            <div class="profile-name-section">
 
-    <div class="animate-on-scroll left2right">
-        <div class="profile-card">
-            <div class="profile-header">
-                <img src={`${import.meta.env.BASE_URL}${profile.image}`} width="200" height="200" class="profile-image">
-                <div class="profile-name-section">
+                <h2 class="profile-name">{profile.items.find(item => item.key === 'name').value}</h2>
+                <p class="profile-role">{profile.items.find(item => item.key === 'role').value}</p>
 
-                    <h2 class="profile-name">{profile.items.find(item => item.key === 'name').value}</h2>
-                    <p class="profile-role">{profile.items.find(item => item.key === 'role').value}</p>
-
-                    <div class="profile-sns">
-                        {profile.social.map(link => (
-                            <a target="_blank" rel="noopener noreferrer" href={link.url} title={link.title} aria-label={link.title}>
-                                <Fragment set:html={socialIcons[link.title]} />
-                            </a>
-                        ))}
-                    </div>
-
+                <div class="profile-sns">
+                    {profile.social.map(link => (
+                        <a target="_blank" rel="noopener noreferrer" href={link.url} title={link.title} aria-label={link.title}>
+                            <Fragment set:html={socialIcons[link.title]} />
+                        </a>
+                    ))}
                 </div>
-            </div>
-            <div class="profile-content">
-                <div class="profile-description">{profile.description}</div>
-                <hr>
-
-                {profile.items.map(item => (
-                    item.key !== 'name' && item.key !== 'role' && (
-                        <div class="row">
-                            <span class="key">{item.key}:</span>
-                            <span>{item.value}</span>
-                        </div>
-                    )
-                ))}
 
             </div>
+        </div>
+        <div class="profile-content">
+            <div class="profile-description">{profile.description}</div>
+            <hr>
+
+            {profile.items.map(item => (
+                item.key !== 'name' && item.key !== 'role' && (
+                    <div class="row">
+                        <span class="key">{item.key}:</span>
+                        <span>{item.value}</span>
+                    </div>
+                )
+            ))}
+
         </div>
     </div>
 </div>
