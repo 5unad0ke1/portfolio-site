@@ -2,6 +2,16 @@ description: |
   ゲームをつくること、なぜそう動くかを突き詰めることが好きです。
   設計から実装まで 自分の意思決定にこだわり 技術の移り変わりを楽しみながら 開発しています。
 
+image: images/5unad0ke1.jpg
+
+social:
+  - title: X
+    url: https://x.com/5unad0ke1
+  - title: GitHub
+    url: https://github.com/5unad0ke1
+  - title: Zenn
+    url: https://zenn.dev/5unad0ke1
+
 items:
   - key: name
     value: 砂時計
