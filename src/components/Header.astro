@@ -41,7 +41,7 @@ const socialIcons = {
         </a>
         <div class="nav-sns">
             {profile.social.map(link => (
-                <a target="_blank" rel="noopener noreferrer" href={link.url} title={link.title} class="sns-link">
+                <a target="_blank" rel="noopener noreferrer" href={link.url} title={link.title} aria-label={link.title} class="sns-link">
                     <Fragment set:html={socialIcons[link.title]} />
                 </a>
             ))}
