@@ -40,8 +40,14 @@
   result: 佳作
   tier: 3
 
+- work: Spacecraft
+  content: ニコニコ超会議 磁石祭 LT大会
+  year: 2023
+  result: 表彰状受賞
+  tier: 3
+
 - work: BallFight
-  content: Unityユースクリエイターカップ
+  content: Unityユースクリエイターカップ 2022
   year: 2022
   result: 一次審査通過
-  tier: 4
+  tier: 3
