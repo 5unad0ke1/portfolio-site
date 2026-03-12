@@ -1,5 +1,20 @@
 ---
 import profile from '../data/profile.yaml';
+
+const socialIcons = {
+    X: `<svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <title>X</title>
+        <path fill="currentColor" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/>
+    </svg>`,
+    GitHub: `<svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <title>GitHub</title>
+        <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    </svg>`,
+    Zenn: `<svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <title>Zenn</title>
+        <path fill="currentColor" d="M.264 23.771h4.984c.264 0 .498-.147.645-.352L19.614.874c.176-.293-.029-.645-.381-.645h-4.72c-.235 0-.44.117-.557.323L.03 23.361c-.088.176.029.41.234.41zM17.445 23.419l6.479-10.408c.205-.323-.029-.733-.41-.733h-4.691c-.176 0-.352.088-.44.235l-6.655 10.643c-.176.264.029.616.352.616h4.779c.234-.001.468-.118.586-.353z"/>
+    </svg>`,
+};
 ---
 
 
@@ -11,54 +26,171 @@ import profile from '../data/profile.yaml';
     </div>
 
     <div class="animate-on-scroll left2right">
-        <div class="cardTop">
-            <img src={`${import.meta.env.BASE_URL}images/5unad0ke1.jpg`} alt="アイコン" width="200" height="200">
-        </div>
-        <div class="cardDown">
-            <div>{profile.description}</div>
-            <hr>
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src={`${import.meta.env.BASE_URL}${profile.image}`} width="200" height="200" class="profile-image">
+                <div class="profile-name-section">
 
-            {profile.items.map(item => (
-                <div class="row">
-                    <span class="key">{item.key}:</span>
-                    <span>{item.value}</span>
+                    <h2 class="profile-name">{profile.items.find(item => item.key === 'name').value}</h2>
+                    <p class="profile-role">{profile.items.find(item => item.key === 'role').value}</p>
+
+                    <div class="profile-sns">
+                        {profile.social.map(link => (
+                            <a target="_blank" rel="noopener noreferrer" href={link.url} title={link.title} aria-label={link.title}>
+                                <Fragment set:html={socialIcons[link.title]} />
+                            </a>
+                        ))}
+                    </div>
+
                 </div>
-            ))}
+            </div>
+            <div class="profile-content">
+                <div class="profile-description">{profile.description}</div>
+                <hr>
+
+                {profile.items.map(item => (
+                    item.key !== 'name' && item.key !== 'role' && (
+                        <div class="row">
+                            <span class="key">{item.key}:</span>
+                            <span>{item.value}</span>
+                        </div>
+                    )
+                ))}
+
+            </div>
         </div>
     </div>
 </div>
 </section>
 
 <style>
-    .row .key{
+    .profile-card {
+        background: linear-gradient(135deg, rgba(100, 100, 150, 0.1) 0%, rgba(80, 80, 120, 0.05) 100%);
+        border-radius: 20px;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid rgba(100, 150, 200, 0.2);
+    }
+
+    .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+        background: linear-gradient(135deg, rgba(100, 120, 150, 0.15) 0%, rgba(60, 80, 110, 0.1) 100%);
+        border-bottom: 1px solid rgba(100, 150, 200, 0.15);
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .profile-name-section {
+        flex: 1;
+    }
+
+    .profile-name {
+        margin: 0 0 10px 0;
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
+        font-weight: 700;
         color: rgb(var(--h1-color));
+        letter-spacing: 0.05em;
     }
-    .about-me .row{
-        display: grid;
-        grid-template-columns: 140px 1fr;
-        font-size: var(--16);
-        padding: 5px 0 5px 0;
+
+    .profile-role {
+        margin: 0;
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        color: rgba(var(--h1-color), 0.8);
+        font-weight: 500;
+        opacity: 0.9;
     }
-    .about-me .cardTop{
-        background-color: #111;
-        padding: 20px;
-        border-radius: 20px 20px 0 0;
+
+    .profile-sns {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
     }
-    .about-me .cardDown{
-        background-color: #333;
-        padding: 20px;
-        border-radius: 0 0 20px 20px;
+
+    .profile-sns a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: rgba(100, 150, 255, 0.1);
+        color: rgb(var(--h1-color));
+        transition: all 0.3s ease;
+        border: 1px solid rgba(100, 150, 200, 0.3);
+    }
+
+    .profile-sns a:hover {
+        background-color: rgba(100, 150, 255, 0.2);
+        transform: scale(1.1);
+        border-color: rgba(100, 150, 200, 0.6);
+    }
+
+    .profile-sns svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .profile-content {
+        padding: 30px;
+    }
+
+    .profile-description {
+        margin-bottom: 20px;
+        line-height: 1.8;
         white-space: pre-line;
     }
 
-    .about-me{
+    .row .key {
+        color: rgb(var(--h1-color));
+        font-weight: 600;
+    }
+
+    .about-me .row {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        font-size: var(--16);
+        padding: 8px 0;
+    }
+
+    .about-me {
         color: rgb(var(--font));
         font-size: var(--16);
-
         letter-spacing: 0.1em;
     }
 
-    .about-me img{
-        border-radius: 50%;
+    @media (max-width: 600px) {
+        .profile-header {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+        }
+
+        .profile-sns {
+            justify-content: center;
+        }
+
+        .about-me .row {
+            grid-template-columns: 100px 1fr;
+        }
     }
 </style>
