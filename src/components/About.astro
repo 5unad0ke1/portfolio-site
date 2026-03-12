@@ -11,54 +11,126 @@ import profile from '../data/profile.yaml';
     </div>
 
     <div class="animate-on-scroll left2right">
-        <div class="cardTop">
-            <img src={`${import.meta.env.BASE_URL}images/5unad0ke1.jpg`} alt="アイコン" width="200" height="200">
-        </div>
-        <div class="cardDown">
-            <div>{profile.description}</div>
-            <hr>
-
-            {profile.items.map(item => (
-                <div class="row">
-                    <span class="key">{item.key}:</span>
-                    <span>{item.value}</span>
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src={`${import.meta.env.BASE_URL}images/5unad0ke1.jpg`} alt="アイコン" width="200" height="200" class="profile-image">
+                <div class="profile-name-section">
+                    <h2 class="profile-name">{profile.items.find(item => item.key === 'name').value}</h2>
+                    <p class="profile-role">{profile.items.find(item => item.key === 'role').value}</p>
                 </div>
-            ))}
+            </div>
+            <div class="profile-content">
+                <div class="profile-description">{profile.description}</div>
+                <hr>
+
+                {profile.items.map(item => (
+                    item.key !== 'name' && item.key !== 'role' && (
+                        <div class="row">
+                            <span class="key">{item.key}:</span>
+                            <span>{item.value}</span>
+                        </div>
+                    )
+                ))}
+            </div>
         </div>
     </div>
 </div>
 </section>
 
 <style>
-    .row .key{
+    .profile-card {
+        background: linear-gradient(135deg, rgba(100, 100, 150, 0.1) 0%, rgba(80, 80, 120, 0.05) 100%);
+        border-radius: 20px;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid rgba(100, 150, 200, 0.2);
+    }
+
+    .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+        background: linear-gradient(135deg, rgba(100, 120, 150, 0.15) 0%, rgba(60, 80, 110, 0.1) 100%);
+        border-bottom: 1px solid rgba(100, 150, 200, 0.15);
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 15px rgba(100, 150, 255, 0.2);
+        flex-shrink: 0;
+    }
+
+    .profile-name-section {
+        flex: 1;
+    }
+
+    .profile-name {
+        margin: 0 0 10px 0;
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
+        font-weight: 700;
         color: rgb(var(--h1-color));
+        letter-spacing: 0.05em;
     }
-    .about-me .row{
-        display: grid;
-        grid-template-columns: 140px 1fr;
-        font-size: var(--16);
-        padding: 5px 0 5px 0;
+
+    .profile-role {
+        margin: 0;
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        color: rgba(var(--h1-color), 0.8);
+        font-weight: 500;
+        opacity: 0.9;
     }
-    .about-me .cardTop{
-        background-color: #111;
-        padding: 20px;
-        border-radius: 20px 20px 0 0;
+
+    .profile-content {
+        padding: 30px;
     }
-    .about-me .cardDown{
-        background-color: #333;
-        padding: 20px;
-        border-radius: 0 0 20px 20px;
+
+    .profile-description {
+        margin-bottom: 20px;
+        line-height: 1.8;
         white-space: pre-line;
     }
 
-    .about-me{
+    .row .key {
+        color: rgb(var(--h1-color));
+        font-weight: 600;
+    }
+
+    .about-me .row {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        font-size: var(--16);
+        padding: 8px 0;
+    }
+
+    .about-me {
         color: rgb(var(--font));
         font-size: var(--16);
-
         letter-spacing: 0.1em;
     }
 
-    .about-me img{
-        border-radius: 50%;
+    @media (max-width: 600px) {
+        .profile-header {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+        }
+
+        .about-me .row {
+            grid-template-columns: 100px 1fr;
+        }
     }
 </style>
