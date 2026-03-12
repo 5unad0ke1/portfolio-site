@@ -1,6 +1,6 @@
 ---
 import { IconMap } from '../utils/iconHTML';
-import skills from '../data/skills.yaml';
+import skills from '../data/new-skills.yaml';
 ---
 
 <section class="skills padding-side" id="skills">
@@ -17,26 +17,20 @@ import skills from '../data/skills.yaml';
         
         <div class="skills-contents">
             
-        {skills.map(skill => (
-        <div>{skill.category}</div>
-
         <div class="skills-group">
-            {skill.items.map(s => (
+            {skills.map(s => (
 
             <a class="skill" href={`#${s.jumpto}`}>
-                <div class="h1">{s.h1}</div>
-                <div class="h2">{s.h2}</div>
-                <div class="icons">
                 
-                {s.icons.map(icon => (
+                <div class="icons">
+                    {s.icons.map(icon => (
                     <i class={IconMap[icon]}></i>
-                ))}
-
+                    ))}
                 </div>
+
+                <div class="h1">{s.title}</div>
             </a>
             ))}
-        </div>
-    ))}
         </div>
     </div>
 </section>
@@ -79,8 +73,6 @@ import skills from '../data/skills.yaml';
         position: relative;
         display: flex;
         flex-direction: column;
-        height: 280px;
-        width: 350px;
 
         padding: 24px;
 
@@ -91,7 +83,7 @@ import skills from '../data/skills.yaml';
 
         border-radius: 12px;
         
-        text-align: center;
+        /* text-align: center; */
         font-size: var(--16);
         white-space: pre-line;
         transition: all 0.3s ease;
@@ -107,33 +99,25 @@ import skills from '../data/skills.yaml';
     }
 
     .skills .skill .h1{
-        font-size: 24px;
-        font-weight: bold;
+        font-size: 20px;
         color: rgb(var(--h1-color));
         margin-bottom: 12px;
         margin-top: 0;
-        order: 2;
+        text-align: left;
     }
 
     .skills .skill .h2{
         font-size: 14px;
         color: rgba(255, 255, 255, 0.7);
         margin: 0 0 20px 0;
-        order: 3;
     }
 
     .skills .skill .icons{
         color: rgb(var(--h1-color));
-        opacity: 0.8;
+        opacity: 0.5;
 
-        font-size: 48px;
+        font-size: 24px;
         display: flex;
         gap: 12px;
-        justify-content: center;
-        align-items: center;
-
-        margin-bottom: 16px;
-        order: 1;
-        flex-wrap: wrap;
     }
 </style>
