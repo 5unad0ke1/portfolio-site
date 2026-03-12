@@ -1,6 +1,6 @@
 ---
 import { IconMap } from '../utils/iconHTML';
-import skills from '../data/skills.yaml';
+import skills from '../data/new-skills.yaml';
 ---
 
 <section class="skills padding-side" id="skills">
@@ -17,26 +17,21 @@ import skills from '../data/skills.yaml';
         
         <div class="skills-contents">
             
-        {skills.map(skill => (
-        <div>{skill.category}</div>
-
         <div class="skills-group">
-            {skill.items.map(s => (
+            {skills.map(s => (
 
-            <a class="skill" href={`#${s.jumpto}`}>
-                <div class="h1">{s.h1}</div>
-                <div class="h2">{s.h2}</div>
-                <div class="icons">
+            <a class="skill">
                 
-                {s.icons.map(icon => (
+                <div class="icons">
+                    {s.icons.map(icon => (
                     <i class={IconMap[icon]}></i>
-                ))}
-
+                    ))}
                 </div>
+
+                <div class="h1">{s.title}</div>
             </a>
             ))}
         </div>
-    ))}
         </div>
     </div>
 </section>
@@ -79,52 +74,51 @@ import skills from '../data/skills.yaml';
         position: relative;
         display: flex;
         flex-direction: column;
-        height: 250px;
-        width: 350px;
 
         padding: 24px;
 
-        padding-top: 80px;
-        
-        text-align: left;
+        text-decoration: none;
+        background: linear-gradient(135deg, rgba(var(--h1-color), 0.15) 0%, rgba(var(--h1-color), 0.08) 100%);
+        border: 2px solid rgba(var(--h1-color), 0.3);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
+        border-radius: 12px;
+        
+        /* text-align: center; */
         font-size: var(--16);
         white-space: pre-line;
-        text-decoration: none;
-        background-color: rgb(var(--font));
-        box-shadow: 0px 0px 10px 0px black;
-
-        border-radius: 10px;
+        transition: all 0.3s ease;
     }
 
     @media (hover: hover) and (pointer: fine) {
         .skills .skill:hover{
-            transform: scale(1.05);
-            transition: transform 0.05s ease;
+            transform: translateY(-8px);
+            border-color: rgb(var(--h1-color));
+            box-shadow: 0 8px 25px rgba(var(--h1-color), 0.2);
+            transition: all 0.3s ease;
         }
     }
 
     .skills .skill .h1{
         font-size: 20px;
         color: rgb(var(--h1-color));
+        margin-bottom: 12px;
+        margin-top: 0;
+        text-align: left;
     }
 
     .skills .skill .h2{
-        font-size: 15px;
-        color: rgb(var(--vscode-color));
-        
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0 0 20px 0;
     }
 
     .skills .skill .icons{
-        color: rgb(var(--vscode-color));
-        opacity: 0.2;
+        color: rgb(var(--h1-color));
+        opacity: 0.5;
 
-        font-size: 32px;
+        font-size: 24px;
         display: flex;
-        gap: 8px;
-
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
+        gap: 12px;
     }
 </style>

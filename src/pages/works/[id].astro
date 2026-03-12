@@ -29,24 +29,27 @@ const base = import.meta.env.BASE_URL;
             </div>
 
             <!-- meta -->
-            <div class="meta white">
-                <span class="meta-data">{work.about}</span>
-                <span class="meta-data">{work.role}</span>
-                <span class="meta-data">{work.status}</span>
+            <div class="meta-section">
+                <h3 class="section-label">プロジェクト情報</h3>
+                <div class="meta white">
+                    <span class="meta-data">{work.about}</span>
+                    <span class="meta-data">{work.role}</span>
+                    <span class="meta-data">{work.status}</span>
+                </div>
             </div>
 
-            <br>
-
-            <div class="languages">
-                {work.languages.map(language => (
-                <span class="language-data">
-                    {language}
-                </span>
-                ))}
+            <!-- technologies -->
+            <div class="tech-section">
+                <h3 class="section-label">使用技術</h3>
+                <div class="languages">
+                    {work.languages.map(language => (
+                    <span class="language-data">
+                        {language}
+                    </span>
+                    ))}
+                </div>
             </div>
-
-            <br>
-
+            <hr>
             <!-- header image -->
             <img class="header-image" src={`${base}${work.image.slice(1)}`} alt={work.name} />
         </div>
@@ -89,15 +92,30 @@ const base = import.meta.env.BASE_URL;
         color: rgb(var(--font));
         white-space: pre-line;
     }
+    
+    .section-label {
+        color: rgb(var(--h1-color));
+        font-size: 16px;
+        font-weight: bold;
+        margin: 24px 0 12px 0;
+    }
+
+    .meta-section,
+    .tech-section {
+        margin-bottom: 20px;
+    }
+
     .meta{
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
     }
     .meta .meta-data{
-        background-color: rgba(255,255,255,0.1);
+        background-color: rgba(var(--h1-color), 0.15);
+        border: 1px solid rgba(var(--h1-color), 0.3);
         border-radius: 10px;
-        padding: 5px;
+        padding: 8px 12px;
+        font-size: 14px;
     }
     .header-image{
         width: 100%;
